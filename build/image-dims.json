@@ -162,5 +162,25 @@
  "assets/images/img-ffe88ef6b002.jpg": {
   "w": 512,
   "h": 279
+ },
+ "assets/images/logo.png": {
+  "w": 740,
+  "h": 193
+ },
+ "assets/images/logo-mark.png": {
+  "w": 386,
+  "h": 386
+ },
+ "assets/images/icon-512.png": {
+  "w": 512,
+  "h": 512
+ },
+ "assets/images/apple-touch-icon.png": {
+  "w": 180,
+  "h": 180
+ },
+ "assets/images/favicon-32.png": {
+  "w": 32,
+  "h": 32
  }
 }

@@ -30,7 +30,7 @@ const BUILD_DATE = '2026-07-27';                      // sitemap <lastmod>
 const BUSINESS = {
   name: 'Thamarai Multispeciality Hospital',
   url: BASE_URL,
-  logo: BASE_URL + '/favicon.svg',
+  logo: BASE_URL + '/assets/images/logo.png',
   telephone: '+91-424-1234567',
   emergencyTelephone: '1066',
   email: 'care@thamaraihospital.com',      // TODO confirm
@@ -273,11 +273,8 @@ function normalizeContent(html) {
 
 // ---- Partials ---------------------------------------------------------------
 const BRAND = `
-      <a class="flex items-center gap-2 shrink-0" href="index.html" aria-label="Thamarai Multispeciality Hospital home">
-        <span class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary shrink-0">
-          <span class="material-symbols-outlined text-[20px]">health_and_safety</span>
-        </span>
-        <span class="font-headline-sm text-headline-sm font-bold text-primary leading-none whitespace-nowrap">Thamarai <span class="font-normal text-on-surface-variant hidden xl:inline">Multispeciality</span></span>
+      <a class="flex items-center shrink-0" href="index.html" aria-label="Thamarai Multispeciality Hospital — home">
+        <img src="assets/images/logo.png" alt="Thamarai Multispeciality Hospital" width="740" height="193" class="h-10 sm:h-11 lg:h-12 w-auto" />
       </a>`;
 
 function header(active) {
@@ -318,7 +315,7 @@ function header(active) {
   <div class="fixed inset-0 z-[60] bg-inverse-surface/40 hidden md:hidden" data-nav-backdrop></div>
   <aside id="mobile-nav" class="fixed top-0 right-0 z-[70] h-full w-4/5 max-w-xs bg-surface shadow-xl translate-x-full transition-transform duration-300 md:hidden flex flex-col" data-nav-drawer aria-label="Mobile">
     <div class="flex items-center justify-between h-20 px-margin-mobile border-b border-outline-variant/30 shrink-0">
-      <span class="font-headline-sm text-headline-sm font-bold text-primary">Menu</span>
+      <img src="assets/images/logo.png" alt="Thamarai Multispeciality Hospital" width="740" height="193" class="h-9 w-auto" />
       <button class="text-on-surface-variant p-2 -mr-2" data-nav-close aria-label="Close menu">
         <span class="material-symbols-outlined">close</span>
       </button>
@@ -338,12 +335,9 @@ function header(active) {
 const FOOTER = `<footer class="bg-surface-container-highest border-t border-outline-variant mt-20">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
       <div class="flex flex-col gap-4">
-        <div class="flex items-center gap-2">
-          <span class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
-            <span class="material-symbols-outlined text-[20px]">health_and_safety</span>
-          </span>
-          <span class="font-headline-sm text-headline-sm font-bold text-primary">Thamarai Multispeciality</span>
-        </div>
+        <a href="index.html" class="inline-block" aria-label="Thamarai Multispeciality Hospital — home">
+          <img src="assets/images/logo.png" alt="Thamarai Multispeciality Hospital" width="740" height="193" class="h-12 w-auto" />
+        </a>
         <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Committed to delivering compassionate, high-quality healthcare to Erode and surrounding districts.</p>
         <div class="flex flex-col gap-1 text-body-md text-on-surface-variant">
           <span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">location_on</span> Erode, Tamil Nadu</span>
@@ -376,11 +370,6 @@ const FOOTER = `<footer class="bg-surface-container-highest border-t border-outl
     </div>
   </footer>`;
 
-const FAVICON =
-  'data:image/svg+xml,' +
-  encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#00685f"/><path d="M16 7v18M7 16h18" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg>`
-  );
 
 // ---------------------------------------------------------------------------
 //  Interactive content: doctors directory + department categories
@@ -679,7 +668,7 @@ function structuredData(page) {
 function documentShell(page) {
   const { title, desc, active, content, out = 'index.html', ogImage } = page;
   const canonical = absUrl(out);
-  const img = absImg(ogImage) || `${BASE_URL}/favicon.svg`;
+  const img = absImg(ogImage) || `${BASE_URL}/assets/images/logo.png`;
   const isIndexable = !page.noindex;
   return `<!DOCTYPE html>
 <html lang="en-IN">
@@ -713,8 +702,9 @@ function documentShell(page) {
   <meta name="twitter:description" content="${esc(desc)}" />
   <meta name="twitter:image" content="${img}" />
 
-  <link rel="icon" href="favicon.svg" />
-  <link rel="apple-touch-icon" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icon-512.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -867,10 +857,6 @@ fs.writeFileSync(path.join(OUT, '404.html'), documentShell({
   }));
 }
 
-// ---- favicon.svg ------------------------------------------------------------
-fs.writeFileSync(path.join(OUT, 'favicon.svg'),
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#00685f"/><path d="M16 7v18M7 16h18" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg>\n`);
-
 // ---- robots.txt + sitemap.xml ----------------------------------------------
 fs.writeFileSync(path.join(OUT, 'robots.txt'),
   `# Thamarai Multispeciality Hospital
@@ -900,4 +886,4 @@ const urls = PAGES.map((p) => {
 }).join('\n');
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
-console.log('Also wrote: 404.html, favicon.svg, robots.txt, sitemap.xml');
+console.log('Also wrote: 404.html, robots.txt, sitemap.xml');
