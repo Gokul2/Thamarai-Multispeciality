@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Thamarai Multispeciality Hospital — custom layer
+   Curated union of the per-screen Stitch utilities.
+   ============================================================ */
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  /* Consistent, visible keyboard focus (WCAG 2.4.7) for interactive elements */
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible,
+  [data-nav-toggle]:focus-visible {
+    outline: 2px solid theme('colors.primary');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect reduced-motion preference (WCAG 2.3.3) */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    background-color: theme('colors.surface');
+    color: theme('colors.on-surface');
+    font-family: 'Inter', sans-serif;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .material-symbols-outlined.fill {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@layer components {
+  .clinical-shadow { box-shadow: 0 4px 20px rgba(13, 148, 136, 0.05); }
+  .clinical-shadow-hover { transition: box-shadow 0.3s ease, transform 0.3s ease; }
+  .clinical-shadow-hover:hover {
+    box-shadow: 0 8px 30px rgba(13, 148, 136, 0.1);
+    transform: translateY(-4px);
+  }
+  /* aliases emitted by some screens */
+  .clinical-blur { box-shadow: 0 4px 20px rgba(13, 148, 136, 0.05); }
+  .clinical-blur-hover { transition: box-shadow 0.3s ease, transform 0.3s ease; }
+  .clinical-blur-hover:hover {
+    box-shadow: 0 8px 30px rgba(13, 148, 136, 0.08);
+    transform: translateY(-4px);
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .transition-clinical { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  .transition-all-custom { transition: all 0.3s ease; }
+
+  .footer-link {
+    font-size: 16px;
+    line-height: 24px;
+    color: theme('colors.on-surface-variant');
+    transition: color 0.2s, transform 0.2s;
+  }
+  .footer-link:hover { color: theme('colors.primary'); transform: translateX(2px); }
+
+  /* Filter chips (departments / blog category filters) */
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    border: 1px solid theme('colors.outline-variant');
+    background: theme('colors.surface-container-low');
+    color: theme('colors.on-surface-variant');
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .filter-chip:hover { border-color: theme('colors.primary'); color: theme('colors.primary'); }
+  .filter-chip.is-active {
+    background: theme('colors.primary');
+    border-color: theme('colors.primary');
+    color: theme('colors.on-primary');
+  }
+
+  .text-primary-teal { color: #0d9488; }
+  .bg-primary-teal { background-color: #0d9488; }
+  .border-primary-teal { border-color: #0d9488; }
+}
+
+@layer utilities {
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+
+  .pulse-animation { animation: pulse 2s infinite; }
+  @keyframes pulse {
+    0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+    70%  { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+    100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+  }
+}

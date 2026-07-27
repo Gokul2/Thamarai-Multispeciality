@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build tooling caches
+.cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log
+build/serve.log
+
+# Scratch
+*.tmp

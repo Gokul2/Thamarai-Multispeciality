@@ -1,0 +1,19 @@
+# Thamarai Multispeciality Hospital
+User-agent: *
+Allow: /
+
+# Search & AI crawlers explicitly welcomed (removing = losing citations)
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GoogleOther
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://www.thamaraihospital.com/sitemap.xml

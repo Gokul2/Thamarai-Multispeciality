@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Find a Doctor - Thamarai Multispeciality</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#006a3c",
+                      "surface-tint": "#006a61",
+                      "surface-dim": "#d8dadc",
+                      "secondary": "#0051d5",
+                      "on-primary-container": "#f4fffc",
+                      "on-secondary-container": "#fefcff",
+                      "tertiary-container": "#08864e",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#316bf3",
+                      "inverse-primary": "#6bd8cb",
+                      "surface-container-low": "#f2f4f6",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-fixed-variant": "#005049",
+                      "on-secondary-fixed": "#00174b",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-fixed-dim": "#73db9a",
+                      "surface-container-highest": "#e0e3e5",
+                      "primary-container": "#008378",
+                      "surface-container": "#eceef0",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "primary-fixed": "#89f5e7",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#f7f9fb",
+                      "tertiary-fixed": "#8ff8b4",
+                      "on-surface-variant": "#3d4947",
+                      "secondary-fixed": "#dbe1ff",
+                      "on-tertiary-fixed": "#00210f",
+                      "on-tertiary-container": "#f6fff5",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#f7f9fb",
+                      "outline": "#6d7a77",
+                      "on-surface": "#191c1e",
+                      "outline-variant": "#bcc9c6",
+                      "surface-variant": "#e0e3e5",
+                      "on-background": "#191c1e",
+                      "error-container": "#ffdad6",
+                      "primary": "#00685f",
+                      "on-tertiary-fixed-variant": "#00522d",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "primary-fixed-dim": "#6bd8cb",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "background": "#f7f9fb",
+                      "on-primary-fixed": "#00201d",
+                      "brand-teal": "#0D9488"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "caption": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-sm": ["Inter"],
+                      "headline-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .clinical-shadow {
+            box-shadow: 0px 4px 20px rgba(13, 148, 136, 0.05);
+        }
+        .clinical-shadow-hover:hover {
+            box-shadow: 0px 8px 30px rgba(13, 148, 136, 0.1);
+            transform: translateY(-2px);
+        }
+        .transition-all-custom {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<!-- Brand -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[32px]">local_hospital</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">Thamarai Multispeciality</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Specialities</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 active:opacity-80 transition-opacity" href="#">Doctors</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Health Packages</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<button class="bg-[#0D9488] hover:bg-[#0F766E] text-white px-6 py-2.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm">
+                    Book Appointment
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="bg-surface-container-low py-16 md:py-24 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#0D9488 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Our Specialist Doctors</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Experience compassionate clinical excellence. Our team of highly qualified specialists is dedicated to providing personalized and advanced medical care for you and your family.
+                </p>
+</div>
+</section>
+<!-- Search & Filter Bar -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop -mt-8 relative z-20">
+<div class="bg-surface-container-lowest rounded-lg p-6 clinical-shadow">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+<!-- Search Input -->
+<div class="col-span-1 md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="doctorSearch">Search Doctor</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488] outline-none transition-colors font-body-md text-body-md text-on-surface placeholder:text-outline" id="doctorSearch" placeholder="Search by name..." type="text"/>
+</div>
+</div>
+<!-- Department Filter -->
+<div class="col-span-1">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="deptFilter">Department</label>
+<div class="relative">
+<select class="w-full pl-4 pr-10 py-3 appearance-none bg-surface border border-outline-variant rounded-lg focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488] outline-none transition-colors font-body-md text-body-md text-on-surface" id="deptFilter">
+<option value="all">All Departments</option>
+<option value="cardiology">Cardiology</option>
+<option value="orthopaedics">Orthopaedics</option>
+<option value="neurology">Neurology</option>
+<option value="general">General Medicine</option>
+<option value="pediatrics">Pediatrics</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+<!-- Experience Filter -->
+<div class="col-span-1">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="expFilter">Experience</label>
+<div class="relative">
+<select class="w-full pl-4 pr-10 py-3 appearance-none bg-surface border border-outline-variant rounded-lg focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488] outline-none transition-colors font-body-md text-body-md text-on-surface" id="expFilter">
+<option value="all">Any Experience</option>
+<option value="0-5">0 - 5 Years</option>
+<option value="5-10">5 - 10 Years</option>
+<option value="10-15">10 - 15 Years</option>
+<option value="15+">15+ Years</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctors Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Doctor Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-6 clinical-shadow clinical-shadow-hover transition-all-custom flex flex-col h-full border border-surface-variant">
+<div class="flex items-start gap-4 mb-4">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-surface-variant">
+<img alt="Dr. K. Ramasamy" class="w-full h-full object-cover" data-alt="A professional headshot of an experienced Indian male cardiologist in his late 50s. He is wearing a clean white doctor's coat over a light blue dress shirt and a stethoscope around his neck. He has a warm, confident smile and graying hair. The background is a brightly lit, modern hospital corridor with a soft, clinical teal light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX_tAW1kQ-bhhhtMBtXEhCY-Zv8bjR_GI6VXcJJDkPC8cG8wzBiQRmFNtMp6JesdbqM8A3jVLVrwE-FZI4put4mX5T7AyAMznFT5J6yAuMMxiw-DuEd2MfcY52AzXReEmbto1pcvhiQBalnHEjYpwhb5at5J0_5nvZXHyqxwLkFAVDqkKUscGG9rjR-yPaGYJ6f2fAWe2_VhH3oxaZOx9dclcZ6qywwpwXaQE_eKy7cwvbPFvd5xokx3Whegq18AmvvjUwVvDSrv4"/>
+</div>
+<div>
+<span class="inline-block px-2 py-1 bg-[#0D9488]/10 text-[#0D9488] rounded font-caption text-caption mb-2">Cardiology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dr. K. Ramasamy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">MBBS, MD, DM Cardiology</p>
+</div>
+</div>
+<div class="mb-4">
+<p class="font-label-md text-label-md text-primary font-medium">Senior Interventional Cardiologist</p>
+</div>
+<div class="space-y-3 mb-6 flex-grow">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">work</span>
+<span class="font-body-md text-body-md text-sm">20+ Years Experience</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">language</span>
+<span class="font-body-md text-body-md text-sm">English, Tamil, Hindi</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">schedule</span>
+<span class="font-body-md text-body-md text-sm">Mon - Sat, 09:00 AM - 05:00 PM</span>
+</div>
+</div>
+<button class="w-full bg-white border border-[#0D9488] text-[#0D9488] hover:bg-[#0D9488] hover:text-white py-2.5 rounded-lg font-label-md text-label-md transition-colors mt-auto">
+                        View Profile
+                    </button>
+<button class="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white py-2.5 rounded-lg font-label-md text-label-md transition-colors mt-3">
+                        Book Appointment
+                    </button>
+</article>
+<!-- Doctor Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-6 clinical-shadow clinical-shadow-hover transition-all-custom flex flex-col h-full border border-surface-variant">
+<div class="flex items-start gap-4 mb-4">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-surface-variant">
+<img alt="Dr. Priya Natarajan" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged female orthopedic surgeon. She wears dark blue scrubs and a stethoscope. She has a reassuring, professional demeanor. The setting is a clean, modern medical examination room bathed in bright, soft natural light with subtle teal accents, representing a high-end hospital environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Z4u8THEUwPKSX49C9F2MwWumrtcuezw_UAvYOOE8yWeGwwmYL41kJ1TOsyBlxLldLDKdMasrS-eYYQbWXpY6B7UadBkVYzRSdxBwejUX8q8h4JRGxSGZt9BPe7fpuzQ3DyUho92vuDmebqLS85Ywk0SeVtHhytD4tGLou6V4ZZAdJANFkLjUWBtiRVdA56o3zvSzIal16ZNy3AJpB7RmGJijEQ0xdzQ9Le9kOUjMw4nj8vXTwjd6yOoEayeDuyqdKLU2SNn9hUA"/>
+</div>
+<div>
+<span class="inline-block px-2 py-1 bg-[#0D9488]/10 text-[#0D9488] rounded font-caption text-caption mb-2">Orthopaedics</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dr. Priya Natarajan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">MS (Ortho), DNB</p>
+</div>
+</div>
+<div class="mb-4">
+<p class="font-label-md text-label-md text-primary font-medium">Consultant Orthopaedic Surgeon</p>
+</div>
+<div class="space-y-3 mb-6 flex-grow">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">work</span>
+<span class="font-body-md text-body-md text-sm">12 Years Experience</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">language</span>
+<span class="font-body-md text-body-md text-sm">English, Tamil</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">schedule</span>
+<span class="font-body-md text-body-md text-sm">Mon - Fri, 10:00 AM - 04:00 PM</span>
+</div>
+</div>
+<button class="w-full bg-white border border-[#0D9488] text-[#0D9488] hover:bg-[#0D9488] hover:text-white py-2.5 rounded-lg font-label-md text-label-md transition-colors mt-auto">
+                        View Profile
+                    </button>
+<button class="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white py-2.5 rounded-lg font-label-md text-label-md transition-colors mt-3">
+                        Book Appointment
+                    </button>
+</article>
+<!-- Doctor Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl p-6 clinical-shadow clinical-shadow-hover transition-all-custom flex flex-col h-full border border-surface-variant">
+<div class="flex items-start gap-4 mb-4">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0 border-2 border-surface-variant">
+<img alt="Dr. Arvind Swamy" class="w-full h-full object-cover" data-alt="A professional portrait of a young, approachable male pediatrician. He is wearing a white coat with colorful cartoon pins on the lapel, standing in a brightly lit, cheerful pediatric clinic. The lighting is soft and inviting, emphasizing a warm, clean, and modern healthcare aesthetic with subtle brand teal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0WUL1aGublQq8qrz4iIJu_va323Ci6apCf4_eZB9DOTJj9StFpIpaq0FmTrX9W3O-G4gPoG_EYgkiYVbUOEo4yFy-sRJsmaIJ4RSotheAplkLaHP683kDiAhMfoZ1QnnkYhh59u5eavFKU4HysP7DmJn8VfdWgOBe1JXc8TekBH8p_gAI_P8Na4l5JLj0EenoJORN-wK0iAI8zG66nk1Dmn9uyocX3k0tLXu63XIxLv6yBk98ZjSy-3LeahtvHpmgxYtAdB9fgk4"/>
+</div>
+<div>
+<span class="inline-block px-2 py-1 bg-[#0D9488]/10 text-[#0D9488] rounded font-caption text-caption mb-2">Pediatrics</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dr. Arvind Swamy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">MD (Pediatrics), Fellowship in Neonatology</p>
+</div>
+</div>
+<div class="mb-4">
+<p class="font-label-md text-label-md text-primary font-medium">Chief Pediatrician &amp; Neonatologist</p>
+</div>
+<div class="space-y-3 mb-6 flex-grow">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">work</span>
+<span class="font-body-md text-body-md text-sm">8 Years Experience</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">language</span>
+<span class="font-body-md text-body-md text-sm">English, Tamil, Telugu</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px]">schedule</span>
+<span class="font-body-md text-body-md text-sm">Mon - Sat, 08:00 AM - 02:00 PM</span>
+</div>
+</div>
+<button class="w-full bg-white border border-[#0D9488] text-[#0D9488] hover:bg-[#0D9488] hover:text-white py-2.5 rounded-lg font-label-md text-label-md transition-colors mt-auto">
+                        View Profile
+                    </button>
+<button class="w-full bg-[#0D9488] hover:bg-[#0F766E] text-white py-2.5 rounded-lg font-label-md text-label-md transition-colors mt-3">
+                        Book Appointment
+                    </button>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim full-width mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-20 px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<!-- Brand / Copyright -->
+<div class="md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">Thamarai Multispeciality</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 Thamarai Multispeciality Hospital. All rights reserved.
+                </p>
+</div>
+<!-- Links -->
+<div class="md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline decoration-2 underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline decoration-2 underline-offset-4 transition-all duration-200" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline decoration-2 underline-offset-4 transition-all duration-200" href="#">Patient Rights</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline decoration-2 underline-offset-4 transition-all duration-200" href="#">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline decoration-2 underline-offset-4 transition-all duration-200" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary underline decoration-2 underline-offset-4 transition-all duration-200" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+</body></html>

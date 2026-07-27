@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Appointment - Thamarai Multispeciality Hospital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#00522d",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-container": "#08864e",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#73db9a",
+                        "primary-fixed": "#89f5e7",
+                        "on-tertiary-container": "#f6fff5",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#8ff8b4",
+                        "on-background": "#191c1e",
+                        "on-surface": "#191c1e",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#dbe1ff",
+                        "secondary": "#0051d5",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface-variant": "#3d4947",
+                        "surface-tint": "#006a61",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#f4fffc",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-fixed": "#00210f",
+                        "inverse-primary": "#6bd8cb",
+                        "background": "#f7f9fb",
+                        "outline-variant": "#bcc9c6",
+                        "tertiary": "#006a3c",
+                        "surface-container": "#eceef0",
+                        "outline": "#6d7a77",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-container": "#316bf3",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-secondary-fixed": "#00174b",
+                        "on-secondary-container": "#fefcff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#005049",
+                        "primary-container": "#008378",
+                        "primary": "#00685f",
+                        "on-primary-fixed": "#00201d",
+                        "surface": "#f7f9fb",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    },
+                    boxShadow: {
+                        'clinical': '0 4px 20px rgba(13, 148, 136, 0.05)',
+                        'clinical-hover': '0 8px 30px rgba(13, 148, 136, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased font-body-md text-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim shadow-[0_4px_20px_rgba(13,148,136,0.05)] sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">
+                Thamarai Multispeciality
+            </div>
+<nav class="hidden md:flex items-center space-x-6 font-body-md text-body-md">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Find Doctor</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">My Appointments</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Health Records</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button aria-label="Notifications" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications" data-weight="fill">notifications</span>
+</button>
+<button aria-label="Account" class="text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle" data-weight="fill">account_circle</span>
+</button>
+<button class="hidden md:inline-flex bg-error text-on-error px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-error/90 transition-colors">
+                    Emergency
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full px-gutter md:px-margin-desktop max-w-container-max mx-auto py-12 md:py-20">
+<!-- Hero Section -->
+<div class="text-center mb-12">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Book Your Appointment</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Experience compassionate clinical excellence. Schedule your visit with our specialists in just a few steps.</p>
+</div>
+<!-- Process Indicator -->
+<div class="max-w-3xl mx-auto mb-12">
+<div class="flex items-center justify-between relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-surface-variant -z-10"></div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md mb-2 shadow-clinical">1</div>
+<span class="font-caption text-caption text-primary font-medium">Patient Details</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-md text-label-md mb-2">2</div>
+<span class="font-caption text-caption text-on-surface-variant">Select Specialist</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-md text-label-md mb-2">3</div>
+<span class="font-caption text-caption text-on-surface-variant">Schedule</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-md text-label-md mb-2">4</div>
+<span class="font-caption text-caption text-on-surface-variant">Confirmation</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Main Form -->
+<div class="lg:col-span-2">
+<form class="bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-clinical hover:shadow-clinical-hover transition-shadow duration-300">
+<h2 class="font-headline-sm text-headline-sm text-on-background border-b border-surface-variant pb-4 mb-6">Patient Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Full Name</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Phone Number</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md transition-colors" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface mb-2">Email Address</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md transition-colors" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-background border-b border-surface-variant pb-4 mb-6 mt-8">Consultation Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Department</label>
+<select class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md appearance-none">
+<option>Select Department</option>
+<option>Cardiology</option>
+<option>Neurology</option>
+<option>Orthopedics</option>
+<option>Pediatrics</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Doctor (Optional)</label>
+<select class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md appearance-none">
+<option>Any Available Doctor</option>
+<option>Dr. Sarah Jenkins</option>
+<option>Dr. Michael Chen</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Preferred Date</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md" type="date"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Preferred Time</label>
+<select class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md appearance-none">
+<option>Morning (9AM - 12PM)</option>
+<option>Afternoon (12PM - 4PM)</option>
+<option>Evening (4PM - 8PM)</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface mb-2">Reason for Visit</label>
+<textarea class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright px-4 py-3 font-body-md text-body-md resize-none" placeholder="Briefly describe your symptoms or reason for visit..." rows="3"></textarea>
+</div>
+</div>
+<div class="mb-8">
+<label class="block font-label-md text-label-md text-on-surface mb-3">Consultation Type</label>
+<div class="flex flex-col sm:flex-row gap-4">
+<label class="flex items-center p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors flex-1">
+<input checked="" class="text-primary focus:ring-primary w-5 h-5" name="consultation_type" type="radio"/>
+<span class="ml-3 font-body-md text-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="domain">domain</span>
+                                    In-person Visit
+                                </span>
+</label>
+<label class="flex items-center p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors flex-1">
+<input class="text-primary focus:ring-primary w-5 h-5" name="consultation_type" type="radio"/>
+<span class="ml-3 font-body-md text-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="videocam">videocam</span>
+                                    Video Consultation
+                                </span>
+</label>
+</div>
+</div>
+<div class="flex justify-end pt-6 border-t border-surface-variant">
+<button class="bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-8 py-3 rounded-lg font-label-md text-label-md shadow-sm transition-all duration-200" type="button">
+                            Continue to Schedule
+                        </button>
+</div>
+</form>
+</div>
+<!-- Sidebar -->
+<div class="lg:col-span-1 space-y-6">
+<!-- Emergency Card -->
+<div class="bg-error-container rounded-xl p-6 shadow-sm border border-error/10">
+<div class="flex items-start gap-4">
+<div class="bg-error/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-error text-3xl" data-icon="emergency">emergency</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-error-container mb-2">24/7 Emergency</h3>
+<p class="font-body-md text-body-md text-on-error-container/80 mb-4">For immediate medical assistance, please call our emergency hotline.</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-error hover:text-error/80 font-bold text-lg" href="tel:911">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                                +1 (800) 911-HELP
+                            </a>
+</div>
+</div>
+</div>
+<!-- Support Card -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-surface-variant">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="support_agent">support_agent</span>
+                        Need Help?
+                    </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Our support team is available from 8 AM to 8 PM to assist you with bookings.</p>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="mail">mail</span>
+                            support@thamarai.com
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="phone">phone</span>
+                            +1 (800) 555-0199
+                        </li>
+</ul>
+</div>
+<div class="rounded-xl overflow-hidden shadow-clinical">
+<img class="w-full h-48 object-cover" data-alt="A bright, modern hospital reception area with soft teal accents, featuring comfortable seating and natural light streaming through large windows. The mood is calm, welcoming, and professional, embodying compassionate clinical excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTWfyD6NiIQ7W6xajz84LFBI9IckobHTNpGO5FK7xhHkAqr6hTKAh7ors4Komlrj1x7hSFv1rD7t6mgwkNYbvWXKS7AKHy6Bvk8TLAMvMiXQcl4uQxmIiL6Lr_1dTM1j77056CMRXxLCboYwv2Z3yC0_XrkLTPKNcvnKoxWItOvJodsVBX0vKAMqGrZpt0aMK_-u2idjnOAnG0PO5U6rIOZluRjcfsYwzxjUIXM5kslKhh5SBhBUl6L73xhEcv1fGvNOsJy3BnBcg"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container mt-auto">
+<div class="w-full py-base px-gutter flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto h-20">
+<div class="font-caption text-caption text-on-surface-variant dark:text-on-surface mb-4 md:mb-0 text-center md:text-left">
+                © 2024 Thamarai Multispeciality Hospital. Quality Healthcare with Compassion.
+            </div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 font-caption text-caption">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Support</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Emergency Protocol</a>
+</nav>
+</div>
+</footer>
+</body></html>

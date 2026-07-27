@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thamarai Multispeciality Hospital</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#73db9a",
+                        "secondary": "#0051d5",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-fixed": "#00201d",
+                        "on-secondary-fixed": "#00174b",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "primary": "#00685f",
+                        "surface-tint": "#006a61",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#fefcff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#6d7a77",
+                        "primary-fixed": "#89f5e7",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#f4fffc",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#00522d",
+                        "tertiary-container": "#08864e",
+                        "on-primary-fixed-variant": "#005049",
+                        "surface-bright": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "on-tertiary-container": "#f6fff5",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed": "#00210f",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#bcc9c6",
+                        "secondary-container": "#316bf3",
+                        "inverse-primary": "#6bd8cb",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary": "#006a3c",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-surface-variant": "#3d4947",
+                        "on-primary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "primary-container": "#008378",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed": "#8ff8b4"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "caption": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    fontSize: {
+                        "caption": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+                        "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "headline-md": ["30px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Utilities */
+        .clinical-shadow {
+            box-shadow: 0 4px 20px rgba(13, 148, 136, 0.05);
+        }
+        .clinical-shadow-hover:hover {
+            box-shadow: 0 8px 30px rgba(13, 148, 136, 0.08);
+            transform: translateY(-4px);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- 1. Header (TopNavBar from JSON) -->
+<header class="top-0 sticky z-50 docked full-width bg-surface/90 backdrop-blur-md dark:bg-inverse-surface/90 shadow-sm dark:shadow-none shadow-[0_4px_20px_rgba(13,148,136,0.05)]">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Thamarai Multispeciality</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-6">
+<!-- Active Item: Home -->
+<a class="font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all px-3 py-2 text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 active:scale-95 transition-transform duration-200 flex flex-col justify-center" href="#">Home</a>
+<!-- Inactive Items -->
+<a class="font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all px-3 py-2 text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform duration-200 flex flex-col justify-center" href="#">Specialities</a>
+<a class="font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all px-3 py-2 text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform duration-200 flex flex-col justify-center" href="#">Doctors</a>
+<a class="font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all px-3 py-2 text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform duration-200 flex flex-col justify-center" href="#">Health Packages</a>
+<a class="font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all px-3 py-2 text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform duration-200 flex flex-col justify-center" href="#">About</a>
+<a class="font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all px-3 py-2 text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors active:scale-95 transition-transform duration-200 flex flex-col justify-center" href="#">Contact</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="hidden lg:flex items-center gap-4">
+<div class="flex items-center gap-2 text-error font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+                    Emergency: 0424-1234567
+                </div>
+<button class="bg-primary hover:bg-primary/90 text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm">
+                    Book Appointment
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- 2. Hero Section (Asymmetric Layout) -->
+<section class="relative pt-12 pb-24 md:pt-20 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<!-- Decorative background blur -->
+<div class="absolute top-0 right-0 w-1/2 h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Content -->
+<div class="lg:col-span-5 flex flex-col gap-6 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container/20 text-secondary w-fit">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-md text-label-md text-sm">NABH Inspired Care</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+                        Healthcare You Can <span class="text-primary relative inline-block">Trust
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-secondary/30" preserveaspectratio="none" viewbox="0 0 100 10"><path d="M0 5 Q 50 10 100 5" fill="transparent" stroke="currentColor" stroke-width="4"></path></svg>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Serving Erode and surrounding districts with 150 beds and 35+ specialist doctors. Experience compassionate care integrated with advanced medical technology.
+                    </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<button class="bg-primary hover:bg-primary/90 text-on-primary px-8 py-3.5 rounded-lg font-label-md text-label-md transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                            Book Appointment
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="border border-secondary text-secondary hover:bg-secondary/5 px-8 py-3.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-2">
+                            Find a Doctor
+                            <span class="material-symbols-outlined text-[18px]">search</span>
+</button>
+</div>
+</div>
+<!-- Right Visual (Bento-style images) -->
+<div class="lg:col-span-7 relative h-[500px] mt-12 lg:mt-0">
+<div class="absolute inset-0 grid grid-cols-12 grid-rows-6 gap-4">
+<!-- Main large image -->
+<div class="col-span-8 row-span-6 rounded-xl overflow-hidden clinical-shadow relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide, bright, highly professional hospital reception area featuring clean architectural lines, glowing white surfaces, and subtle teal accents. Several doctors in pristine white coats are conversing in the background while a friendly nurse assists a patient. The lighting is soft, natural, and creates a calm, trustworthy atmosphere fitting for a premium healthcare facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBccOBwGtBPKwoKFk6lLKjY2cuxjh5knIWw3dYy_cTMwzhgf6yBpDKl2zEezhCvZ0WU3QjMtxSsExBo_HtGPqeZ2WcY23Jyc5B_w-3hBXj4sAfu6Bc6k453ct9l3X_LBLLutWiyf-FUnJuFWDoSu0oy0N2lyJ7pIZ-wWGRTreg3pfJSTBnWKhbrQ5Jjl9HmSJAGktUeaWXff03PtVq_X75jb0jSyHJMhrjwsTowohi5ex4U3Ht6zbOS-pehvM_Szs1_mjmSqqXPlic"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 to-transparent"></div>
+</div>
+<!-- Top small image -->
+<div class="col-span-4 row-span-3 rounded-xl overflow-hidden clinical-shadow relative group hidden sm:block">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up view of modern medical diagnostic equipment, specifically a sleek MRI scanner in a bright, pristine room with soft blue and teal ambient lighting. The aesthetic implies advanced technology, precision, and high-quality medical care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKx_aakyB-IEZwUO4JEDW41cE3ZLjUtf2T6_DPOSoWm-Os5nTIz6u25N55IfjoACVOthsco_H0zI0F9mlPYQ6bm1mXN9VviTAl5kMfCSySQZl0_4K2uTT2Khl6WMqJAlBmZ0RU30EFtZ0e-_NUCx6QWnz6SJmLx-u-Nv3iU1wDg8c1hvJPSy5atCFGiC8z2tkBDtbpL6BNgWekV2e_ydBYCkzi_071kkPdoGFaxKBbrfDXwMkFTBieI91vAgFNjnmN2wYWLpsTgWY"/>
+</div>
+<!-- Bottom small info card (Glassmorphism) -->
+<div class="col-span-4 row-span-3 rounded-xl glass-panel clinical-shadow p-6 flex flex-col justify-center items-start hidden sm:flex">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[24px]">vital_signs</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1 text-lg">24/7 Care</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Always ready for emergencies.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Trust Indicators (Floating Strip) -->
+<section class="relative z-20 -mt-16 mb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-surface-container-lowest rounded-xl clinical-shadow p-6 md:p-8 flex flex-wrap justify-between items-center gap-6 md:gap-10 border border-outline-variant/30">
+<div class="flex flex-col items-center flex-1 min-w-[120px]">
+<span class="font-headline-md text-headline-md text-primary mb-1">20+</span>
+<span class="font-label-md text-label-md text-on-surface-variant text-center">Years of Trust</span>
+</div>
+<div class="hidden md:block w-px h-12 bg-outline-variant/50"></div>
+<div class="flex flex-col items-center flex-1 min-w-[120px]">
+<span class="font-headline-md text-headline-md text-primary mb-1">150</span>
+<span class="font-label-md text-label-md text-on-surface-variant text-center">Bed Capacity</span>
+</div>
+<div class="hidden md:block w-px h-12 bg-outline-variant/50"></div>
+<div class="flex flex-col items-center flex-1 min-w-[120px]">
+<span class="font-headline-md text-headline-md text-primary mb-1">35+</span>
+<span class="font-label-md text-label-md text-on-surface-variant text-center">Expert Doctors</span>
+</div>
+<div class="hidden lg:block w-px h-12 bg-outline-variant/50"></div>
+<div class="flex flex-col items-center flex-1 min-w-[120px]">
+<span class="font-headline-md text-headline-md text-error mb-1">24x7</span>
+<span class="font-label-md text-label-md text-on-surface-variant text-center">Emergency</span>
+</div>
+</div>
+</section>
+<!-- 4. Quick Services (Grid) -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Dedicated Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Streamlined access to our core medical facilities ensuring you get the right care without delay.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+<!-- Card 1 -->
+<a class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col items-center text-center group border border-transparent hover:border-primary/20" href="#">
+<div class="w-14 h-14 rounded-full bg-primary/5 group-hover:bg-primary group-hover:text-on-primary text-primary flex items-center justify-center transition-colors mb-4">
+<span class="material-symbols-outlined text-[28px]">calendar_month</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Appointment</span>
+</a>
+<!-- Card 2 -->
+<a class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col items-center text-center group border border-transparent hover:border-primary/20" href="#">
+<div class="w-14 h-14 rounded-full bg-primary/5 group-hover:bg-primary group-hover:text-on-primary text-primary flex items-center justify-center transition-colors mb-4">
+<span class="material-symbols-outlined text-[28px]">stethoscope</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Doctors</span>
+</a>
+<!-- Card 3 -->
+<a class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col items-center text-center group border border-transparent hover:border-primary/20" href="#">
+<div class="w-14 h-14 rounded-full bg-primary/5 group-hover:bg-primary group-hover:text-on-primary text-primary flex items-center justify-center transition-colors mb-4">
+<span class="material-symbols-outlined text-[28px]">biotech</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Diagnostics</span>
+</a>
+<!-- Card 4 -->
+<a class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col items-center text-center group border border-transparent hover:border-error/20" href="#">
+<div class="w-14 h-14 rounded-full bg-error/5 group-hover:bg-error group-hover:text-on-error text-error flex items-center justify-center transition-colors mb-4">
+<span class="material-symbols-outlined text-[28px]">emergency</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Emergency</span>
+</a>
+<!-- Card 5 -->
+<a class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col items-center text-center group border border-transparent hover:border-secondary/20" href="#">
+<div class="w-14 h-14 rounded-full bg-secondary/5 group-hover:bg-secondary group-hover:text-on-secondary text-secondary flex items-center justify-center transition-colors mb-4">
+<span class="material-symbols-outlined text-[28px]">volunteer_activism</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Packages</span>
+</a>
+<!-- Card 6 -->
+<a class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col items-center text-center group border border-transparent hover:border-primary/20" href="#">
+<div class="w-14 h-14 rounded-full bg-primary/5 group-hover:bg-primary group-hover:text-on-primary text-primary flex items-center justify-center transition-colors mb-4">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Insurance</span>
+</a>
+</div>
+</section>
+<!-- 5. Specialities (Bento Grid) -->
+<section class="py-20 bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Centers of Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive multispeciality care driven by experienced professionals and modern technology.</p>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+                        View All Specialities <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[200px]">
+<!-- Cardiology (Large) -->
+<div class="md:col-span-2 lg:col-span-2 row-span-2 rounded-xl bg-primary-container p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute right-0 bottom-0 w-64 h-64 bg-on-primary-container/10 rounded-full blur-[40px] translate-x-1/4 translate-y-1/4"></div>
+<div class="relative z-10 text-on-primary-container">
+<span class="material-symbols-outlined text-[48px] mb-4">ecg_heart</span>
+<h3 class="font-headline-sm text-headline-sm mb-2">Cardiology</h3>
+<p class="font-body-md text-body-md opacity-90 max-w-sm">Advanced heart care including non-invasive diagnostics and interventional procedures.</p>
+</div>
+<button class="relative z-10 mt-auto w-fit bg-on-primary-container text-primary-container px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-white transition-colors">Learn More</button>
+</div>
+<!-- Orthopaedics -->
+<div class="rounded-xl bg-surface p-6 flex flex-col justify-center border border-outline-variant/30 hover:border-primary/30 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-3 group-hover:scale-110 transition-transform">format_h4</span>
+<h3 class="font-label-md text-label-md text-on-surface text-lg mb-1">Orthopaedics</h3>
+<p class="font-caption text-caption text-on-surface-variant">Joint replacement &amp; trauma</p>
+</div>
+<!-- Neurology -->
+<div class="rounded-xl bg-surface p-6 flex flex-col justify-center border border-outline-variant/30 hover:border-primary/30 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-primary mb-3 group-hover:scale-110 transition-transform">psychology</span>
+<h3 class="font-label-md text-label-md text-on-surface text-lg mb-1">Neurology</h3>
+<p class="font-caption text-caption text-on-surface-variant">Brain &amp; spine care</p>
+</div>
+<!-- Pediatrics -->
+<div class="rounded-xl bg-surface p-6 flex flex-col justify-center border border-outline-variant/30 hover:border-primary/30 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-tertiary-container mb-3 group-hover:scale-110 transition-transform">child_care</span>
+<h3 class="font-label-md text-label-md text-on-surface text-lg mb-1">Pediatrics</h3>
+<p class="font-caption text-caption text-on-surface-variant">Child healthcare</p>
+</div>
+<!-- Gynecology -->
+<div class="rounded-xl bg-surface p-6 flex flex-col justify-center border border-outline-variant/30 hover:border-primary/30 transition-colors group cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-3 group-hover:scale-110 transition-transform">pregnant_woman</span>
+<h3 class="font-label-md text-label-md text-on-surface text-lg mb-1">Gynecology</h3>
+<p class="font-caption text-caption text-on-surface-variant">Women's wellness</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 13. Footer (from JSON) -->
+<footer class="full-width bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline flat no shadows cursor-pointer mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">Thamarai Multispeciality</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant max-w-xs">
+                    Committed to delivering compassionate, high-quality healthcare to our community.
+                </p>
+</div>
+<!-- Links Column -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md font-bold text-on-surface dark:text-on-surface-dark mb-2">Patient Resources</h4>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim font-medium hover:translate-x-1 transition-transform duration-200" href="#">Patient Rights</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200" href="#">Sitemap</a>
+</div>
+<!-- Legal Column -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md font-bold text-on-surface dark:text-on-surface-dark mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200" href="#">Terms of Service</a>
+</div>
+<!-- Contact Column -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md font-bold text-on-surface dark:text-on-surface-dark mb-2">Connect</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200" href="#">Careers</a>
+</div>
+</div>
+<!-- Copyright -->
+<div class="border-t border-outline-variant/50 dark:border-outline/50 py-6 px-margin-mobile md:px-margin-desktop text-center">
+<p class="font-caption text-caption text-on-surface-variant dark:text-outline-variant">© 2024 Thamarai Multispeciality Hospital. All rights reserved. Erode, Tamil Nadu.</p>
+</div>
+</footer>
+</body></html>

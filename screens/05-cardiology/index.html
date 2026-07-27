@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Advanced Cardiology Care - Thamarai Hospital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e0e3e5",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#08864e",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "surface": "#f7f9fb",
+                      "on-primary-fixed-variant": "#005049",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#191c1e",
+                      "primary-fixed": "#89f5e7",
+                      "surface-container-high": "#e6e8ea",
+                      "outline": "#6d7a77",
+                      "on-tertiary-fixed-variant": "#00522d",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#6bd8cb",
+                      "on-tertiary-container": "#f6fff5",
+                      "on-primary-fixed": "#00201d",
+                      "inverse-surface": "#2d3133",
+                      "surface-dim": "#d8dadc",
+                      "secondary-fixed": "#dbe1ff",
+                      "secondary": "#0051d5",
+                      "primary-fixed-dim": "#6bd8cb",
+                      "on-secondary-fixed": "#00174b",
+                      "outline-variant": "#bcc9c6",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#73db9a",
+                      "surface-bright": "#f7f9fb",
+                      "on-surface-variant": "#3d4947",
+                      "on-primary-container": "#f4fffc",
+                      "surface-tint": "#006a61",
+                      "surface-container-low": "#f2f4f6",
+                      "on-secondary-container": "#fefcff",
+                      "primary-container": "#008378",
+                      "on-tertiary-fixed": "#00210f",
+                      "surface-container-highest": "#e0e3e5",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "on-background": "#191c1e",
+                      "error": "#ba1a1a",
+                      "tertiary": "#006a3c",
+                      "surface-container": "#eceef0",
+                      "background": "#f7f9fb",
+                      "secondary-container": "#316bf3",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-fixed": "#8ff8b4",
+                      "primary": "#00685f",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "30px",
+                              {
+                                      "lineHeight": "38px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+      </script>
+<style>
+        body {
+            background-color: #f7f9fb; /* background color */
+        }
+        .clinical-shadow {
+            box-shadow: 0 4px 20px rgba(13, 148, 136, 0.05);
+        }
+        .clinical-shadow-hover:hover {
+            box-shadow: 0 8px 30px rgba(13, 148, 136, 0.1);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .text-primary-teal {
+            color: #0D9488;
+        }
+        .bg-primary-teal {
+            background-color: #0D9488;
+        }
+        .border-primary-teal {
+            border-color: #0D9488;
+        }
+      </style>
+</head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest sticky top-0 w-full z-50 shadow-sm">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-headline-sm font-headline-sm text-primary">Thamarai Hospital</div>
+<nav class="hidden md:flex gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md md:font-label-md md:text-label-md hover:bg-surface-container-low px-4 py-2 rounded-lg" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold font-body-md text-body-md md:font-label-md md:text-label-md hover:bg-surface-container-low px-4 py-2 rounded-lg" href="#">Specialities</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md md:font-label-md md:text-label-md hover:bg-surface-container-low px-4 py-2 rounded-lg" href="#">Doctors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md md:font-label-md md:text-label-md hover:bg-surface-container-low px-4 py-2 rounded-lg" href="#">Health Packages</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<button class="font-label-md text-label-md text-error px-4 py-2 rounded-lg border border-error hover:bg-error-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+                    Emergency
+                </button>
+<button class="font-label-md text-label-md bg-primary text-on-primary px-6 py-2 rounded-lg hover:bg-primary-container transition-colors shadow-sm">
+                    Book Appointment
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-gutter relative">
+<!-- Left Content Area (Col 1-8) -->
+<div class="lg:col-span-8 space-y-16">
+<!-- Hero Banner -->
+<section class="relative rounded-xl overflow-hidden clinical-shadow h-[400px] flex items-end">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover z-0" data-alt="A modern, high-tech cardiology operating room or consultation room with advanced medical equipment. The lighting is bright and clean, emphasizing a modern corporate healthcare setting with subtle teal accents. The mood is professional, reassuring, and technologically advanced. A team of diverse cardiologists in scrubs can be seen in the soft background blur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvES0-lyLeEUxfu1k-uPMs2-b-JDc-cPuWDILxmApqGkMvu2tNfjjsHcGZUU8ghHsYHwKh3rDuG2PeND9peHIpz__XjmdjO7HeOIB3g2ziM_ZYa0VT1E-fOzkaEuZSFZxN1TwJR5tdjWDwGhEBQUFmU75aQtK9sKcNg3R80-eVQoPcxo0QbwQCokYfV7-15nYrpnhsSlxq-UBeIUy-1k9DSYGeEng35AW4AVu1YrkKydpXqnKj9TxMUaBCViTcQDiZ6j_Re6CoDoE"/>
+<div class="relative z-20 p-8 md:p-12 text-on-primary">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-4 text-white">Advanced Cardiology Care</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl">Leading heart care with precision, technology, and compassion in the heart of Erode.</p>
+</div>
+</section>
+<!-- Overview -->
+<section class="space-y-6">
+<h2 class="font-headline-md text-headline-md text-primary">Excellence in Heart Health</h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-4 leading-relaxed">
+<p>At Thamarai Multispeciality Hospital, our Cardiology Department is dedicated to providing comprehensive, world-class cardiac care. We combine cutting-edge technology with the expertise of leading specialists to diagnose, treat, and manage all forms of heart disease.</p>
+<p>Our mission is to deliver patient-centric care that prioritizes both clinical precision and profound compassion, ensuring that every patient receives personalized treatment tailored to their unique heart health needs in Erode and surrounding regions.</p>
+</div>
+</section>
+<!-- Stats -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-3" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">10,000+</h3>
+<p class="font-caption text-caption text-on-surface-variant">Successful Procedures</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-3" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">98%</h3>
+<p class="font-caption text-caption text-on-surface-variant">Patient Satisfaction</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow text-center">
+<span class="material-symbols-outlined text-error text-4xl mb-3" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">24/7</h3>
+<p class="font-caption text-caption text-on-surface-variant">Cardiac ER</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-3" style="font-variation-settings: 'FILL' 1;">groups</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">15+</h3>
+<p class="font-caption text-caption text-on-surface-variant">Specialist Surgeons</p>
+</div>
+</section>
+<!-- Treatments -->
+<section class="space-y-8">
+<h2 class="font-headline-md text-headline-md text-primary">Treatments &amp; Procedures</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow-hover clinical-shadow flex gap-4 items-start">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">vital_signs</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-2">Angioplasty &amp; Stenting</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Minimally invasive procedures to open narrowed or blocked blood vessels.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow-hover clinical-shadow flex gap-4 items-start">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">monitor_heart</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-2">Bypass Surgery (CABG)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Advanced surgical interventions to improve blood flow to the heart muscle.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow-hover clinical-shadow flex gap-4 items-start">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">pacemaker</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-2">Pacemaker Implantation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Expert device implantation for managing irregular heart rhythms.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow-hover clinical-shadow flex gap-4 items-start">
+<div class="bg-primary/10 p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-2">Pediatric Cardiology</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Specialized congenital heart disease diagnosis and treatment for children.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Sidebar (Sticky) (Col 9-12) -->
+<aside class="lg:col-span-4 space-y-6">
+<div class="sticky top-[100px] space-y-6">
+<!-- Appointment Form -->
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow border-t-4 border-primary">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6">Book an Appointment</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Patient Name</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary text-body-md bg-surface" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Phone Number</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary text-body-md bg-surface" placeholder="+91 XXXXX XXXXX" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Preferred Date</label>
+<input class="w-full rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary text-body-md bg-surface" type="date"/>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 rounded-lg hover:bg-primary-container transition-colors mt-4" type="button">
+                            Request Appointment
+                        </button>
+</form>
+</div>
+<!-- Emergency Contact -->
+<div class="bg-error-container p-6 rounded-xl text-on-error-container">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<h4 class="font-headline-sm text-headline-sm">Cardiac Emergency</h4>
+</div>
+<p class="font-body-md text-body-md mb-4">24/7 Immediate Response</p>
+<a class="block bg-error text-on-error text-center font-headline-sm text-headline-sm py-3 rounded-lg hover:bg-error/90 transition-colors" href="tel:+1234567890">
+                        1066
+                    </a>
+</div>
+<!-- Contact Specialist -->
+<button class="w-full border-2 border-secondary text-secondary font-label-md text-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">forum</span>
+                    Contact a Specialist
+                </button>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full py-16 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 space-y-4">
+<div class="text-headline-sm font-headline-sm text-on-surface">Thamarai Hospital</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Thamarai Multispeciality Hospital. Quality Healthcare with Compassion.</p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Patient Rights</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Medical Records</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Careers</a>
+</div>
+</div>
+</footer>
+</body></html>

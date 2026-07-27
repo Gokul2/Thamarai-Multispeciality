@@ -1,0 +1,70 @@
+<!-- Contact enquiry form -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <div>
+      <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Send Us a Message</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Have a question about our services, departments or your visit? Fill in the form and our team will get back to you within one working day.</p>
+      <div class="flex flex-col gap-4">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary">location_on</span>
+          <p class="font-body-md text-body-md text-on-surface-variant">123 Healthcare Way, Erode, Tamil Nadu 638001</p>
+        </div>
+        <a class="flex items-start gap-3 hover:text-primary" href="tel:04241234567">
+          <span class="material-symbols-outlined text-primary">call</span>
+          <span class="font-body-md text-body-md text-on-surface-variant">0424-1234567</span>
+        </a>
+        <a class="flex items-start gap-3 hover:text-primary" href="mailto:care@thamaraihospital.com">
+          <span class="material-symbols-outlined text-primary">mail</span>
+          <span class="font-body-md text-body-md text-on-surface-variant">care@thamaraihospital.com</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 clinical-shadow border border-outline-variant/30">
+      <form data-contact-form novalidate class="flex flex-col gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block font-label-md text-label-md text-on-surface mb-2" for="cf-name">Full Name</label>
+            <input id="cf-name" name="name" type="text" required placeholder="Your name"
+              class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+            <p data-error-for="name" class="hidden text-error font-caption text-caption mt-1">Please enter your name.</p>
+          </div>
+          <div>
+            <label class="block font-label-md text-label-md text-on-surface mb-2" for="cf-phone">Phone Number</label>
+            <input id="cf-phone" name="phone" type="tel" required placeholder="+91 98765 43210"
+              class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+            <p data-error-for="phone" class="hidden text-error font-caption text-caption mt-1">Please enter a valid 10-digit phone number.</p>
+          </div>
+        </div>
+        <div>
+          <label class="block font-label-md text-label-md text-on-surface mb-2" for="cf-email">Email Address</label>
+          <input id="cf-email" name="email" type="email" required placeholder="you@example.com"
+            class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+          <p data-error-for="email" class="hidden text-error font-caption text-caption mt-1">Please enter a valid email address.</p>
+        </div>
+        <div>
+          <label class="block font-label-md text-label-md text-on-surface mb-2" for="cf-subject">Subject</label>
+          <select id="cf-subject" name="subject"
+            class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+            <option>General Enquiry</option>
+            <option>Appointment Query</option>
+            <option>Departments &amp; Services</option>
+            <option>Health Packages</option>
+            <option>Feedback</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-label-md text-label-md text-on-surface mb-2" for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" required placeholder="How can we help you?"
+            class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-y"></textarea>
+          <p data-error-for="message" class="hidden text-error font-caption text-caption mt-1">Please enter a message.</p>
+        </div>
+        <button type="submit" class="bg-primary hover:bg-primary/90 text-on-primary px-6 py-3.5 rounded-lg font-label-md text-label-md transition-colors shadow-sm">Send Message</button>
+        <p data-contact-success class="hidden text-primary font-label-md text-body-md bg-primary/10 rounded-lg px-4 py-3 flex items-center gap-2">
+          <span class="material-symbols-outlined">check_circle</span>
+          Thank you! Your message has been received. Our team will contact you within one working day.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Health &amp; Wellness Insights - Thamarai Health</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#bcc9c6",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#00174b",
+                        "surface-container-high": "#e6e8ea",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-fixed-variant": "#00522d",
+                        "tertiary-container": "#08864e",
+                        "on-primary-fixed": "#00201d",
+                        "tertiary-fixed-dim": "#73db9a",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-container": "#f6fff5",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#006a3c",
+                        "on-surface-variant": "#3d4947",
+                        "on-surface": "#191c1e",
+                        "error": "#ba1a1a",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary-container": "#f4fffc",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed": "#8ff8b4",
+                        "secondary-fixed": "#dbe1ff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-fixed-variant": "#005049",
+                        "surface-tint": "#006a61",
+                        "surface-variant": "#e0e3e5",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "surface": "#f7f9fb",
+                        "primary-container": "#008378",
+                        "on-error-container": "#93000a",
+                        "secondary": "#0051d5",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "outline": "#6d7a77",
+                        "primary-fixed": "#89f5e7",
+                        "primary": "#00685f",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-container": "#316bf3",
+                        "surface-dim": "#d8dadc",
+                        "inverse-primary": "#6bd8cb",
+                        "on-tertiary-fixed": "#00210f",
+                        "background": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clinical-shadow {
+            box-shadow: 0 4px 20px rgba(13, 148, 136, 0.05);
+        }
+        .clinical-shadow-hover:hover {
+            box-shadow: 0 8px 30px rgba(13, 148, 136, 0.1);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="w-full top-0 sticky z-50 bg-surface-bright dark:bg-surface-dim shadow-[0_4px_20px_rgba(13,148,136,0.05)] shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto py-4 hidden md:flex">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">
+                Thamarai Health
+            </a>
+<!-- Nav Links -->
+<nav class="flex items-center space-x-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">
+                    Find a Doctor
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">
+                    Departments
+                </a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">
+                    Health Blog
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">
+                    Patient Portal
+                </a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center space-x-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-outline-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-highest rounded-full border-none focus:ring-2 focus:ring-primary text-body-md font-body-md w-48 transition-all" placeholder="Search blog..." type="text"/>
+</div>
+<button class="font-label-md text-label-md text-primary hover:bg-surface-container px-4 py-2 rounded-lg transition-colors">
+                    Login
+                </button>
+<button class="font-label-md text-label-md bg-error text-on-error px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors shadow-sm">
+                    Emergency
+                </button>
+</div>
+</div>
+<!-- Mobile Header (Simplified) -->
+<div class="flex md:hidden justify-between items-center w-full px-margin-mobile py-4">
+<a class="font-headline-sm text-headline-sm font-bold text-primary" href="#">
+                Thamarai Health
+            </a>
+<button class="text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12 space-y-20">
+<!-- Header Section -->
+<section class="text-center space-y-4">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Health &amp; Wellness Insights</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Empowering you with expert medical knowledge and lifestyle advice from our specialists.</p>
+</section>
+<!-- Category Navigation -->
+<nav class="flex overflow-x-auto pb-4 gap-4 hide-scrollbar justify-start md:justify-center border-b border-surface-container-high">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-colors">All Articles</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">Heart Health</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">Diabetes</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">Nutrition</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">Women's Health</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">Children</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">Lifestyle</button>
+</nav>
+<!-- Hero Featured Article -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter bg-surface-container-lowest rounded-xl overflow-hidden clinical-shadow">
+<div class="lg:col-span-8 h-64 lg:h-[400px] relative">
+<img alt="Doctor reviewing heart scan" class="absolute inset-0 w-full h-full object-cover" data-alt="A modern, high-tech cardiology consultation room in a premium multispeciality hospital. A middle-aged doctor in a crisp white coat is reviewing detailed 3D heart scans on a large glowing monitor with a patient. The lighting is soft, clean, and bright, featuring cool white tones with subtle teal accents. The atmosphere is professional, reassuring, and advanced, reflecting modern healthcare." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4pXxMvICLTmoGV5QK5Ne0aBRzvcKryYjpUl5mfxlGc98e2lM6l_ZscbpMQgCTIAdZ9zPIHpuzIt0aHlnoqdybxo1mzU12QVqlvH59B28g_A0cZjWfgUvgYRSWWuQIDiAMyRqBXAj3iHbD7shOshsba5Sy68kMjisELv87jaBnUaya66Dnc3RbvVQAEJZcfD9pDBY8lVmjbnJDZrPROF-8Sjyk9ptur5dh_A_dasjWZ9_nGUNQdZV-znAonLGVj-ReKwruzdMzO9Q"/>
+</div>
+<div class="lg:col-span-4 p-8 flex flex-col justify-center space-y-6">
+<div class="flex items-center space-x-3">
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary rounded-full font-label-md text-label-md">Heart Health</span>
+<span class="text-on-surface-variant font-caption text-caption flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">schedule</span> 5 min read</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface hover:text-primary cursor-pointer transition-colors">The Future of Cardiac Care: New Advancements in Erode</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Discover the latest minimally invasive procedures and state-of-the-art diagnostic tools our cardiology department is implementing to improve patient outcomes and recovery times.</p>
+<div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors inline-flex items-center">
+                        Read Full Article
+                        <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Layout: Grid + Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Article Grid -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden clinical-shadow clinical-shadow-hover flex flex-col cursor-pointer group">
+<div class="h-48 relative overflow-hidden">
+<img alt="Superfoods" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully arranged overhead shot of heart-healthy superfoods on a clean white marble countertop. The composition includes fresh avocados, walnuts, vibrant blueberries, dark leafy greens, and a small bowl of olive oil. The lighting is bright, natural, and crisp, enhancing the rich colors of the fresh produce. The aesthetic is clean, modern, and appetizing, emphasizing nutrition and wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhNChNPBQw9ZrtLBnhi1uaYgt7ALobf7vl7K4fQT0zfGuI-55yytah45fjfvkNZxpZqNxkq_wYBlUN2KSKct8vuylZAdJ6oXCRK7ng3sQH0IDLNW1X_HLMFw1K6U-4zrVr-wlieY1spa-f48niflkYOWnO4jMxGhzgpAcNt_4GMBCALfYvBy-rjzUvknpMCJ6iraw6f-DBhNQwRRR8ebnj__eMje6a5VNl4Sdda1O7RSZTWRraZAlaQBtyPtqom5S493-VXgoT4GQ"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-primary rounded-full font-label-md text-label-md shadow-sm">Nutrition</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2 text-[20px] leading-tight">5 Superfoods for a Healthy Heart</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 flex-grow">Incorporate these nutrient-dense foods into your daily diet to naturally lower cholesterol and support cardiovascular health.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-2 border-t border-surface-container-high">
+<span class="font-caption text-caption">Oct 12, 2024</span>
+<span class="font-caption text-caption flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">schedule</span> 3 min read</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden clinical-shadow clinical-shadow-hover flex flex-col cursor-pointer group">
+<div class="h-48 relative overflow-hidden">
+<img alt="Family celebrating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A warm, lifestyle image of an Indian family celebrating a festival in a modern, well-lit home. A middle-aged man is smiling while mindfully choosing a healthy snack from a decorative tray. The lighting is soft and inviting, with subtle festive decorations in the background. The overall mood is joyous yet health-conscious, capturing the balance of managing a chronic condition during celebrations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDutZGR6KPHwaGqjRMrzMdIKihrIOot8bHuLAPzqDmBO1KfB5bK2d0B23bVF1NC7zi3X7SoWaHExONNjpBGP90STnFIPy4wQEokWtKwtZc416o-MvODsrDlSjhHuLn-Zjns_eanBMS9-nxwkgSne2psS_IpiDT5gqh-_kMvfq0Jdk8aAUMJdVgjMdicURjqQIuPdSrb_RJX7jrHh03fU6eKSN_rX3hDKxfb8RsEA_uZq9btCj7zbG746YGJvWOUANchrO8unq4zlq0"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-secondary rounded-full font-label-md text-label-md shadow-sm">Diabetes</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2 text-[20px] leading-tight">Managing Diabetes in the Festive Season</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 flex-grow">Expert tips from our endocrinologists on how to enjoy festive treats without compromising your blood sugar levels.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-2 border-t border-surface-container-high">
+<span class="font-caption text-caption">Oct 10, 2024</span>
+<span class="font-caption text-caption flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">schedule</span> 4 min read</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden clinical-shadow clinical-shadow-hover flex flex-col cursor-pointer group">
+<div class="h-48 relative overflow-hidden">
+<img alt="Woman doing yoga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene, brightly lit yoga studio with expansive windows. A woman in comfortable athletic wear is performing a gentle stretching pose on a mat. The color palette is calming, featuring soft whites, muted greens, and warm sunlight filtering through the glass. The aesthetic conveys tranquility, physical wellness, and mental clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbqMDTAEvoR4djytQ_O6HUtFWa9sufd34ZH2fT1QmB8_U6o3akct4YqzY8vxC8iMYUMZ8Kf3gHUdsed1z7H2c_f6bryYrDux8A981-AlkW8LSIhe5SMGsMyMWPUj6hOYXv0bniElos7U03d4mcNMStpqhQ6whTTp2rbSEeP8fV9v2F5vhhJULaee4Ak-W2ztCRglzpDnZKTqr6gIh9P0RUDypiXKzmKNVaSY_Y6__mY0BO8a3-FhW6yb-QzsZ8AuZxTrs8Cyl5pUg"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-tertiary rounded-full font-label-md text-label-md shadow-sm">Lifestyle</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2 text-[20px] leading-tight">The Crucial Role of Sleep in Recovery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 flex-grow">Why getting 8 hours of quality rest is the most important medicine for post-operative healing and immune support.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-2 border-t border-surface-container-high">
+<span class="font-caption text-caption">Oct 05, 2024</span>
+<span class="font-caption text-caption flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">schedule</span> 6 min read</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden clinical-shadow clinical-shadow-hover flex flex-col cursor-pointer group">
+<div class="h-48 relative overflow-hidden">
+<img alt="Pediatrician with child" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A comforting clinical setting showing a friendly pediatrician in a white coat interacting with a smiling young child sitting on an examination table. The room is bright, clean, and welcoming, with subtle colorful details designed to put children at ease. The lighting is soft and flattering, emphasizing trust and compassionate pediatric care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHdJRCZovRMw-UlRsIh32oVY4LHJOGSb9V2pm7H4ZOAIVjjvLz6CXQFfRePxovRmd9_Vi1rmz9FfJGxIdAiz5Qa31NKnJi3Pb0j70CAU7w2W-TXu_XuTGNiy5Av076l_1wgQInQ0JY72uxImCsd0hJXeymWa5fI9UsFoA5xkMwTb5kWDOTdQDyn1iAdKaBeDf2Jz4kej66z_CPPQOIstrKdkLAFhqeVtjw-gbz2Vo9FnbhaVWnN5DJyFDkTbK2tMyeoktcQ8iuJ3Q"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-secondary-container rounded-full font-label-md text-label-md shadow-sm">Children</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-2 text-[20px] leading-tight">Childhood Immunizations: What Parents Need to Know</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 flex-grow">A comprehensive guide to standard vaccination schedules and why herd immunity matters for your family.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-2 border-t border-surface-container-high">
+<span class="font-caption text-caption">Oct 01, 2024</span>
+<span class="font-caption text-caption flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">schedule</span> 5 min read</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Newsletter Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow border-t-4 border-primary">
+<div class="flex items-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl mr-3">mark_email_unread</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface text-[20px]">Stay Informed</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Get our latest health insights, expert advice, and hospital news delivered weekly to your inbox.</p>
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<div>
+<label class="sr-only" for="email">Email address</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-primary font-body-md text-body-md transition-all outline-none" id="email" placeholder="Your email address" required="" type="email"/>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 rounded-lg hover:bg-primary/90 transition-colors shadow-sm" type="submit">
+                            Subscribe to Newsletter
+                        </button>
+<p class="font-caption text-caption text-outline text-center mt-2">We respect your privacy. Unsubscribe at any time.</p>
+</form>
+</div>
+<!-- Popular Articles -->
+<div class="bg-surface-container-lowest p-6 rounded-xl clinical-shadow">
+<h3 class="font-headline-sm text-headline-sm text-on-surface text-[20px] mb-6 flex items-center">
+<span class="material-symbols-outlined text-secondary mr-2">trending_up</span>
+                        Most Popular
+                    </h3>
+<div class="space-y-6">
+<a class="flex items-start space-x-4 group" href="#">
+<img alt="Blood pressure monitor" class="w-20 h-20 rounded-lg object-cover flex-shrink-0" data-alt="A close up of a modern, sleek digital blood pressure monitor displaying a healthy reading resting on a clean white surface. Soft, professional lighting highlights the screen. The aesthetic is clinical, reassuring, and precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAexqtodUWM-jemst24hVi1M9DcIciPt7hghYQQOIXfJGj_Yc-b52IsM_F0RjntllFcruPAcCsY7jMdIR6tcHu4eu-udUo1ZBvdqUqz4DP4ShvOKMiunutva7gbW-7PG-Al_CPGVst_UVUU2FH3HJxS--eE6vmivRMOmvCJeBNe9doyHydYjuLDMLTLOU-CchjePvsEvrCo223pVmOyzMo3nB8CUWx4Q9cRrq1rzN1ID2-OrSSswzRQhnopUwwNr3___L3qz6GqcKk"/>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors line-clamp-2 mb-1">Understanding Your Blood Pressure Readings</h4>
+<span class="font-caption text-caption text-on-surface-variant flex items-center"><span class="material-symbols-outlined text-[14px] mr-1">schedule</span> 4 min read</span>
+</div>
+</a>
+<a class="flex items-start space-x-4 group" href="#">
+<img alt="Physical therapy" class="w-20 h-20 rounded-lg object-cover flex-shrink-0" data-alt="A physiotherapist's hands gently guiding a patient's knee through a rehabilitation exercise. The setting is a bright, modern physical therapy room. The lighting is natural and optimistic, reflecting healing and progress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1NTKTkoWD0mVyG5Aczgq_QjCOk8wBmjEiDZoAG_IRjQS4nGYvJEgrKFI76rwXAy69oH_Ih1HMe1eWCgi6MyP2PK0EdL4reOxEkQ0pQf7sdQ0oh4tDKdBQqfjRjp4VvMNvE1HQRrgINJBdEz9gjU9E7uR8-56EZZKGG4AzEymnBeLcRx-IJnnjwL-E5yDkiQOCWavdLNSXmeaM6zgo60Q50DX3OhefYDDbkwH1L4yTzA39AzcgrPqyeHeRe2WszvlfoMKwATysEQU"/>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors line-clamp-2 mb-1">Post-Surgery Rehab: Exercises to Do at Home</h4>
+<span class="font-caption text-caption text-on-surface-variant flex items-center"><span class="material-symbols-outlined text-[14px] mr-1">schedule</span> 7 min read</span>
+</div>
+</a>
+<a class="flex items-start space-x-4 group" href="#">
+<img alt="Women's health team" class="w-20 h-20 rounded-lg object-cover flex-shrink-0" data-alt="A diverse group of female doctors and nurses in a bright, modern hospital corridor, smiling and discussing a patient chart. The image conveys teamwork, expertise, and a welcoming environment for women's healthcare." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9dbwhfpawVf2Tm5JKRLS3uW91VgITf63prJX7qg5gHKIWm_RvgGysR1e_C_Y5gHCbez0fmVvx5ktUCHpCU7eMJIGmeSXG1D6GXSefMIO7eZRuH_POOAxKJkRMqdBrH9kuU0xnVreWVYtamJ9Ne1OsTikKHhfri3Y1p4YZefE7GrJbukXWnNdfLADcaorGZ0nGkkmggvH92Num7A35bmgEcIG5K8msCPYSU9MFI_wLUPjCwhqy4FDayeVFc5N_qXNVdKzP4dEeKmU"/>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors line-clamp-2 mb-1">Women's Health Screening Guide by Age</h4>
+<span class="font-caption text-caption text-on-surface-variant flex items-center"><span class="material-symbols-outlined text-[14px] mr-1">schedule</span> 5 min read</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Department Quick Links -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-surface-container-high">
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-4">Explore Departments</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-md font-caption text-caption text-on-surface-variant cursor-pointer hover:border-primary hover:text-primary transition-colors">Cardiology</span>
+<span class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-md font-caption text-caption text-on-surface-variant cursor-pointer hover:border-primary hover:text-primary transition-colors">Orthopedics</span>
+<span class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-md font-caption text-caption text-on-surface-variant cursor-pointer hover:border-primary hover:text-primary transition-colors">Neurology</span>
+<span class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-md font-caption text-caption text-on-surface-variant cursor-pointer hover:border-primary hover:text-primary transition-colors">Pediatrics</span>
+<span class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-md font-caption text-caption text-on-surface-variant cursor-pointer hover:border-primary hover:text-primary transition-colors">Oncology</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto py-base min-h-[80px]">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<span class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim block mb-1">Thamarai Health</span>
+<span class="font-caption text-caption text-on-surface-variant dark:text-outline-variant">© 2024 Thamarai Multispeciality Hospital. Quality Healthcare with Compassion.</span>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100" href="#">Contact Us</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-90 hover:opacity-100" href="#">Careers</a>
+</nav>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,137 @@
+{
+  "designSystem": {
+    "displayName": "Compassionate Clinical Excellence",
+    "styleGuidelines": "## Brand & Style\nThe design system is built on the pillars of **Trust, Precision, and Accessibility**. Designed for a multispeciality environment, it balances high-end clinical professionalism with the warmth required for patient-centric care. \n\nThe aesthetic follows a **Modern Corporate** style with leanings toward **Minimalism**. It prioritizes clarity and calm through heavy whitespace, high-quality healthcare imagery, and a UI that feels light and breathable. The goal is to reduce cognitive load for patients and provide a high-efficiency interface for medical staff.\n\n## Layout & Spacing\nThe system employs a **Fluid Grid** model based on an 8px square baseline. \n\n- **Desktop:** 12-column grid with 64px outer margins and 24px gutters. Content should be centered with a max-width of 1280px to prevent excessive line lengths.\n- **Tablet:** 8-column grid with 32px margins.\n- **Mobile:** 4-column grid with 20px margins.\n\nGenerous vertical padding (minimum 80px between sections on desktop) is mandatory to reflect the \"Quality Healthcare with Compassion\" brand promise, ensuring the UI never feels cramped or urgent.\n\n## Elevation & Depth\nDepth is created through **Ambient Shadows** and **Tonal Layers** rather than harsh borders. \n\n- **Surface Level 0:** The primary page background (`#F8FAFC`).\n- **Surface Level 1 (Cards/Modals):** Pure white (`#FFFFFF`) with a very soft, diffused shadow. \n- **Shadow Profile:** Use a \"Clinical Blur\"\u2014an Y-offset of 4px, a blur of 20px, and a 5% opacity of the Primary Teal color (`#0D9488`). This subtle tinting of the shadow makes the interface feel more cohesive and modern than standard black shadows.\n- **Interaction:** On hover, cards should lift slightly (Y-offset 8px, blur 30px) to provide tactile feedback.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Primary Teal with white text. High-contrast, 8px radius.\n- **Secondary:** Outlined Blue (#2563EB) for secondary actions like \"View Records.\"\n- **Ghost:** Minimal Teal text for less critical navigation.\n\n### Input Fields\nInputs use a light grey stroke (#E2E8F0) that transitions to Primary Teal on focus. Labels sit clearly above the field. Error states use a soft red (#EF4444) but maintain the same 8px radius.\n\n### Cards\nCards are the primary organizational unit. They feature 16px padding and the \"Clinical Blur\" shadow. For doctor profiles, use a top-aligned circular or soft-square image mask.\n\n### Chips & Badges\nUsed for hospital departments (e.g., Cardiology, Pediatrics). These should have a background of 10% opacity of the Primary Teal or Secondary Blue with centered text in the solid parent color.\n\n### Additional Components\n- **Appointment Scheduler:** A clean, calendar-based interface using the Accent Green to highlight available slots.\n- **Progress Steppers:** For patient onboarding or lab report stages, using thin lines and Primary Teal nodes.\n- **Emergency CTA:** A fixed floating action button (FAB) or high-visibility header item using a distinct contrast to ensure immediate accessibility.",
+    "theme": {
+      "bodyFont": "INTER",
+      "bodyFontFamily": "Inter",
+      "colorMode": "LIGHT",
+      "colorVariant": "FIDELITY",
+      "customColor": "#0d9488",
+      "designMd": "---\nname: Compassionate Clinical Excellence\ncolors:\n  surface: '#f7f9fb'\n  surface-dim: '#d8dadc'\n  surface-bright: '#f7f9fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f2f4f6'\n  surface-container: '#eceef0'\n  surface-container-high: '#e6e8ea'\n  surface-container-highest: '#e0e3e5'\n  on-surface: '#191c1e'\n  on-surface-variant: '#3d4947'\n  inverse-surface: '#2d3133'\n  inverse-on-surface: '#eff1f3'\n  outline: '#6d7a77'\n  outline-variant: '#bcc9c6'\n  surface-tint: '#006a61'\n  primary: '#00685f'\n  on-primary: '#ffffff'\n  primary-container: '#008378'\n  on-primary-container: '#f4fffc'\n  inverse-primary: '#6bd8cb'\n  secondary: '#0051d5'\n  on-secondary: '#ffffff'\n  secondary-container: '#316bf3'\n  on-secondary-container: '#fefcff'\n  tertiary: '#006a3c'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#08864e'\n  on-tertiary-container: '#f6fff5'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#89f5e7'\n  primary-fixed-dim: '#6bd8cb'\n  on-primary-fixed: '#00201d'\n  on-primary-fixed-variant: '#005049'\n  secondary-fixed: '#dbe1ff'\n  secondary-fixed-dim: '#b4c5ff'\n  on-secondary-fixed: '#00174b'\n  on-secondary-fixed-variant: '#003ea8'\n  tertiary-fixed: '#8ff8b4'\n  tertiary-fixed-dim: '#73db9a'\n  on-tertiary-fixed: '#00210f'\n  on-tertiary-fixed-variant: '#00522d'\n  background: '#f7f9fb'\n  on-background: '#191c1e'\n  surface-variant: '#e0e3e5'\ntypography:\n  headline-lg:\n    fontFamily: Inter\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Inter\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 40px\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Inter\n    fontSize: 30px\n    fontWeight: '600'\n    lineHeight: 38px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Inter\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  caption:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 16px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n---\n\n## Brand & Style\nThe design system is built on the pillars of **Trust, Precision, and Accessibility**. Designed for a multispeciality environment, it balances high-end clinical professionalism with the warmth required for patient-centric care. \n\nThe aesthetic follows a **Modern Corporate** style with leanings toward **Minimalism**. It prioritizes clarity and calm through heavy whitespace, high-quality healthcare imagery, and a UI that feels light and breathable. The goal is to reduce cognitive load for patients and provide a high-efficiency interface for medical staff.\n\n## Colors\nThe palette uses **Teal (#0D9488)** as the primary brand anchor, symbolizing healing and stability. **Secondary Blue (#2563EB)** is utilized for critical actions and navigational cues, providing a sense of technical competence. **Soft Green (#86EFAC)** acts as an accent for success states and health-positive indicators. \n\nThe background strategy relies on a \"Super-White\" philosophy\u2014using `#FFFFFF` for primary cards and `#F8FAFC` for page backgrounds to maintain a sterile yet welcoming clinical atmosphere. Neutral greys should be cool-toned to remain cohesive with the Teal and Blue.\n\n## Typography\nThis design system utilizes **Inter** exclusively to ensure a systematic, utilitarian, and highly legible experience across all touchpoints. \n\nThe hierarchy is strictly enforced:\n- **Headlines:** Use Bold and Semi-Bold weights with tight letter-spacing to create an authoritative presence.\n- **Body Text:** Standardizes on a 16px base for optimal readability for elderly patients. \n- **Labels:** Used for metadata like doctor specialties or department names, employing Medium weight and slight tracking for clarity at small sizes.\n\n## Layout & Spacing\nThe system employs a **Fluid Grid** model based on an 8px square baseline. \n\n- **Desktop:** 12-column grid with 64px outer margins and 24px gutters. Content should be centered with a max-width of 1280px to prevent excessive line lengths.\n- **Tablet:** 8-column grid with 32px margins.\n- **Mobile:** 4-column grid with 20px margins.\n\nGenerous vertical padding (minimum 80px between sections on desktop) is mandatory to reflect the \"Quality Healthcare with Compassion\" brand promise, ensuring the UI never feels cramped or urgent.\n\n## Elevation & Depth\nDepth is created through **Ambient Shadows** and **Tonal Layers** rather than harsh borders. \n\n- **Surface Level 0:** The primary page background (`#F8FAFC`).\n- **Surface Level 1 (Cards/Modals):** Pure white (`#FFFFFF`) with a very soft, diffused shadow. \n- **Shadow Profile:** Use a \"Clinical Blur\"\u2014an Y-offset of 4px, a blur of 20px, and a 5% opacity of the Primary Teal color (`#0D9488`). This subtle tinting of the shadow makes the interface feel more cohesive and modern than standard black shadows.\n- **Interaction:** On hover, cards should lift slightly (Y-offset 8px, blur 30px) to provide tactile feedback.\n\n## Shapes\nThe shape language is defined by **Softness and Safety**. All interactive elements and containers utilize a **Rounded (Level 2)** configuration.\n\n- **Primary Buttons & Inputs:** 0.5rem (8px) corner radius.\n- **Large Cards & Featured Containers:** 1rem (16px) corner radius.\n- **Specialty Chips/Badges:** Fully rounded (pill-shaped) to distinguish them from actionable buttons.\n- **Imagery:** Medical photography should always feature rounded corners to maintain the friendly, compassionate visual narrative.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Primary Teal with white text. High-contrast, 8px radius.\n- **Secondary:** Outlined Blue (#2563EB) for secondary actions like \"View Records.\"\n- **Ghost:** Minimal Teal text for less critical navigation.\n\n### Input Fields\nInputs use a light grey stroke (#E2E8F0) that transitions to Primary Teal on focus. Labels sit clearly above the field. Error states use a soft red (#EF4444) but maintain the same 8px radius.\n\n### Cards\nCards are the primary organizational unit. They feature 16px padding and the \"Clinical Blur\" shadow. For doctor profiles, use a top-aligned circular or soft-square image mask.\n\n### Chips & Badges\nUsed for hospital departments (e.g., Cardiology, Pediatrics). These should have a background of 10% opacity of the Primary Teal or Secondary Blue with centered text in the solid parent color.\n\n### Additional Components\n- **Appointment Scheduler:** A clean, calendar-based interface using the Accent Green to highlight available slots.\n- **Progress Steppers:** For patient onboarding or lab report stages, using thin lines and Primary Teal nodes.\n- **Emergency CTA:** A fixed floating action button (FAB) or high-visibility header item using a distinct contrast to ensure immediate accessibility.",
+      "font": "INTER",
+      "headlineFont": "INTER",
+      "headlineFontFamily": "Inter",
+      "labelFont": "INTER",
+      "labelFontFamily": "Inter",
+      "namedColors": {
+        "background": "#f7f9fb",
+        "error": "#ba1a1a",
+        "error_container": "#ffdad6",
+        "inverse_on_surface": "#eff1f3",
+        "inverse_primary": "#6bd8cb",
+        "inverse_surface": "#2d3133",
+        "on_background": "#191c1e",
+        "on_error": "#ffffff",
+        "on_error_container": "#93000a",
+        "on_primary": "#ffffff",
+        "on_primary_container": "#f4fffc",
+        "on_primary_fixed": "#00201d",
+        "on_primary_fixed_variant": "#005049",
+        "on_secondary": "#ffffff",
+        "on_secondary_container": "#fefcff",
+        "on_secondary_fixed": "#00174b",
+        "on_secondary_fixed_variant": "#003ea8",
+        "on_surface": "#191c1e",
+        "on_surface_variant": "#3d4947",
+        "on_tertiary": "#ffffff",
+        "on_tertiary_container": "#f6fff5",
+        "on_tertiary_fixed": "#00210f",
+        "on_tertiary_fixed_variant": "#00522d",
+        "outline": "#6d7a77",
+        "outline_variant": "#bcc9c6",
+        "primary": "#00685f",
+        "primary_container": "#008378",
+        "primary_fixed": "#89f5e7",
+        "primary_fixed_dim": "#6bd8cb",
+        "secondary": "#0051d5",
+        "secondary_container": "#316bf3",
+        "secondary_fixed": "#dbe1ff",
+        "secondary_fixed_dim": "#b4c5ff",
+        "surface": "#f7f9fb",
+        "surface_bright": "#f7f9fb",
+        "surface_container": "#eceef0",
+        "surface_container_high": "#e6e8ea",
+        "surface_container_highest": "#e0e3e5",
+        "surface_container_low": "#f2f4f6",
+        "surface_container_lowest": "#ffffff",
+        "surface_dim": "#d8dadc",
+        "surface_tint": "#006a61",
+        "surface_variant": "#e0e3e5",
+        "tertiary": "#006a3c",
+        "tertiary_container": "#08864e",
+        "tertiary_fixed": "#8ff8b4",
+        "tertiary_fixed_dim": "#73db9a"
+      },
+      "overrideNeutralColor": "#f8fafc",
+      "overridePrimaryColor": "#0d9488",
+      "overrideSecondaryColor": "#2563eb",
+      "overrideTertiaryColor": "#86efac",
+      "roundness": "ROUND_EIGHT",
+      "spacing": {
+        "base": "8px",
+        "container-max": "1280px",
+        "gutter": "24px",
+        "margin-desktop": "64px",
+        "margin-mobile": "20px"
+      },
+      "spacingScale": 2,
+      "typography": {
+        "body-lg": {
+          "fontFamily": "Inter",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "lineHeight": "28px"
+        },
+        "body-md": {
+          "fontFamily": "Inter",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px"
+        },
+        "caption": {
+          "fontFamily": "Inter",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "16px"
+        },
+        "headline-lg": {
+          "fontFamily": "Inter",
+          "fontSize": "48px",
+          "fontWeight": "700",
+          "letterSpacing": "-0.02em",
+          "lineHeight": "56px"
+        },
+        "headline-lg-mobile": {
+          "fontFamily": "Inter",
+          "fontSize": "32px",
+          "fontWeight": "700",
+          "letterSpacing": "-0.02em",
+          "lineHeight": "40px"
+        },
+        "headline-md": {
+          "fontFamily": "Inter",
+          "fontSize": "30px",
+          "fontWeight": "600",
+          "letterSpacing": "-0.01em",
+          "lineHeight": "38px"
+        },
+        "headline-sm": {
+          "fontFamily": "Inter",
+          "fontSize": "24px",
+          "fontWeight": "600",
+          "lineHeight": "32px"
+        },
+        "label-md": {
+          "fontFamily": "Inter",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "letterSpacing": "0.05em",
+          "lineHeight": "20px"
+        }
+      }
+    }
+  },
+  "name": "assets/5239247e3fbb4ccf9a3b05370d188d02",
+  "version": "1"
+}

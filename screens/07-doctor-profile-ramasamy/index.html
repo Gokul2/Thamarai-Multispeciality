@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dr. K. Ramasamy - Thamarai Multispeciality Hospital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#006a61",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary": "#0051d5",
+                        "background": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#08864e",
+                        "inverse-primary": "#6bd8cb",
+                        "on-tertiary-container": "#f6fff5",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#89f5e7",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#008378",
+                        "outline-variant": "#bcc9c6",
+                        "on-primary-fixed-variant": "#005049",
+                        "outline": "#6d7a77",
+                        "on-primary-fixed": "#00201d",
+                        "primary": "#00685f",
+                        "on-secondary-fixed": "#00174b",
+                        "tertiary": "#006a3c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-primary-container": "#f4fffc",
+                        "on-tertiary-fixed-variant": "#00522d",
+                        "on-surface-variant": "#3d4947",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "secondary-container": "#316bf3",
+                        "on-tertiary-fixed": "#00210f",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#8ff8b4",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container": "#eceef0",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "tertiary-fixed-dim": "#73db9a",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-container": "#fefcff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1e",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        base: "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        gutter: "24px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        caption: ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-md": ["30px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        caption: ["12px", { lineHeight: "16px", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clinical-shadow {
+            box-shadow: 0px 4px 20px 0px rgba(13, 148, 136, 0.05);
+        }
+        .clinical-shadow-hover:hover {
+            box-shadow: 0px 8px 30px 0px rgba(13, 148, 136, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-dim sticky top-0 w-full z-50 shadow-[0px_4px_20px_0px_rgba(0,104,95,0.05)] shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto md:hidden hidden">
+<!-- Mobile nav would go here, suppressed for simplicity in this task scope, focusing on desktop layout per prompt constraints but adhering to classes -->
+</div>
+<div class="hidden md:flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto w-full">
+<a class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim font-bold shrink-0" href="#">
+                Thamarai Multispeciality
+            </a>
+<div class="flex items-center gap-gutter">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Find Doctors</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Appointments</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 ease-in-out" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-full text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors w-64" placeholder="Search doctors, specialties..." type="text"/>
+</div>
+<button class="bg-error text-on-error px-6 py-2 rounded-full font-label-md text-label-md hover:bg-error-container hover:text-on-error-container transition-colors shadow-sm">
+                    Emergency
+                </button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 space-y-16">
+<!-- Hero Section -->
+<section class="bg-surface-container-lowest rounded-xl clinical-shadow overflow-hidden flex flex-col md:flex-row relative">
+<div class="w-full md:w-1/3 relative min-h-[400px] md:min-h-full">
+<img class="absolute inset-0 w-full h-full object-cover object-top" data-alt="A professional, high-quality portrait photograph of an experienced senior Indian male cardiologist in a modern clinical setting. He is wearing a clean white medical coat over professional attire, with a stethoscope around his neck. He has a warm, compassionate smile and graying hair, projecting deep experience and trust. The lighting is soft, natural, and bright, enhancing the modern, pristine teal and white color palette of the hospital environment. The background is softly blurred to keep focus on the doctor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8QcFOYwnHTpPqLtMVeUmSeDggHoLuMunjQBwLXaWnJqjs_IwKsDnP_DRMpL6Uf8SktYdZKSeLxt5GrCb628EuMrquPJZZ-UNjHXuLjjoN56Z_qSyH0kVVPgxCChTNazMs-LqG-ha6PDzSsZ2rJlur6DG-eaHPholh7hW3WVgWl3I4SUhUfu6KIPqL3_jWszuVLnWUxJSsYR4Rfa7ygVIqjHflBsA4nBn7CNMZmzPPs4JGAkYqnMlTr0LWgLjOceRQoMW2gaAvvWQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent md:hidden"></div>
+</div>
+<div class="w-full md:w-2/3 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-surface-container-low/30 relative z-10">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full w-max mb-6">
+<span class="material-symbols-outlined text-sm" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md font-semibold">Senior Consultant</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Dr. K. Ramasamy</h1>
+<p class="font-headline-sm text-headline-sm text-primary mb-4">Senior Interventional Cardiologist</p>
+<div class="flex flex-wrap gap-y-2 gap-x-6 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="school">school</span>
+<span class="font-body-md text-body-md">MBBS, MD, DM (Cardiology)</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="work">work</span>
+<span class="font-body-md text-body-md">20+ Years Experience</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="language">language</span>
+<span class="font-body-md text-body-md">English, Tamil</span>
+</div>
+</div>
+<div class="prose prose-slate max-w-none">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Dr. K. Ramasamy is a highly distinguished Interventional Cardiologist known for his precise diagnostic skills and compassionate patient care. With over two decades of clinical excellence, he specializes in complex coronary interventions, structural heart diseases, and advanced heart failure management. His approach combines state-of-the-art medical technology with a deeply humanistic touch, ensuring every patient receives comprehensive, personalized cardiac care.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Main Content Layout -->
+<div class="flex flex-col lg:flex-row gap-gutter relative items-start">
+<!-- Left Column: Detailed Info -->
+<div class="w-full lg:w-2/3 space-y-12">
+<!-- Specializations (Bento Grid Style) -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        Clinical Focus
+                    </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-lg clinical-shadow border border-outline-variant/30 flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="cardiology">cardiology</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold mb-1">Complex Angioplasty</h3>
+<p class="font-caption text-caption text-on-surface-variant">Expertise in multi-vessel interventions and chronic total occlusions.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg clinical-shadow border border-outline-variant/30 flex items-start gap-4">
+<div class="bg-secondary/10 p-3 rounded-full text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="pacemaker">pacemaker</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold mb-1">Pacemaker Implantation</h3>
+<p class="font-caption text-caption text-on-surface-variant">Advanced device therapies for rhythm disorders.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg clinical-shadow border border-outline-variant/30 flex items-start gap-4">
+<div class="bg-tertiary/10 p-3 rounded-full text-tertiary shrink-0">
+<span class="material-symbols-outlined" data-icon="ecg">ecg</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold mb-1">Heart Failure Management</h3>
+<p class="font-caption text-caption text-on-surface-variant">Comprehensive care plans for chronic heart conditions.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg clinical-shadow border border-outline-variant/30 flex items-start gap-4">
+<div class="bg-error/10 p-3 rounded-full text-error shrink-0">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold mb-1">Structural Heart Interventions</h3>
+<p class="font-caption text-caption text-on-surface-variant">Minimally invasive valve repairs and replacements.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Training Timeline -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu" data-weight="fill" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+                        Education &amp; Training
+                    </h2>
+<div class="relative border-l-2 border-primary/20 ml-4 space-y-8 pl-8">
+<div class="relative">
+<div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-primary border-4 border-surface-container-lowest"></div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold">DM Cardiology</h3>
+<p class="font-caption text-caption text-primary mb-1">All India Institute of Medical Sciences (AIIMS), New Delhi</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Completed advanced specialization focusing on interventional techniques and cardiovascular research.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-outline-variant border-4 border-surface-container-lowest"></div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold">MD General Medicine</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-1">Madras Medical College, Chennai</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-outline-variant border-4 border-surface-container-lowest"></div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold">MBBS</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-1">Stanley Medical College, Chennai</p>
+</div>
+</div>
+</section>
+<!-- Patient Reviews -->
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="reviews" data-weight="fill" style="font-variation-settings: 'FILL' 1;">reviews</span>
+                            Patient Experiences
+                        </h2>
+<div class="flex items-center gap-1 text-on-surface font-bold">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+<span class="text-on-surface-variant font-normal text-sm ml-1">(128 Reviews)</span>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg clinical-shadow border border-outline-variant/20">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+                                        M
+                                    </div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Muthukumar S.</h4>
+<div class="flex items-center gap-1 text-tertiary text-xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user">verified_user</span>
+                                            Verified Patient
+                                        </div>
+</div>
+</div>
+<div class="flex text-tertiary-container text-sm">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                                "Dr. Ramasamy performed my father's angioplasty. His calm demeanor and clear explanation of the procedure put our entire family at ease. The recovery was smooth, and we are deeply grateful for his expertise."
+                            </p>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg clinical-shadow border border-outline-variant/20">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">
+                                        P
+                                    </div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Priya K.</h4>
+<div class="flex items-center gap-1 text-tertiary text-xs mt-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified_user">verified_user</span>
+                                            Verified Patient
+                                        </div>
+</div>
+</div>
+<div class="flex text-tertiary-container text-sm">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star_half" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                                "Very professional and patient. He listened to all my concerns regarding my palpitations and suggested a thorough plan without rushing into unnecessary tests. Highly recommended."
+                            </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky Appointment Widget -->
+<aside class="w-full lg:w-1/3 lg:sticky lg:top-28">
+<div class="bg-surface-container-lowest rounded-xl clinical-shadow border border-outline-variant/30 overflow-hidden">
+<!-- Header -->
+<div class="bg-primary p-6 text-on-primary">
+<h3 class="font-headline-sm text-headline-sm mb-1">Book Consultation</h3>
+<div class="flex items-center gap-2 opacity-90">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Consultation Fee: ₹1,000</span>
+</div>
+</div>
+<!-- Content -->
+<div class="p-6 space-y-6">
+<!-- Availability -->
+<div>
+<div class="flex items-center gap-2 mb-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="calendar_month">calendar_month</span>
+<h4 class="font-label-md text-label-md font-bold">Schedule Highlights</h4>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/20 mb-2 flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Mon, Wed, Fri</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">10:00 AM - 02:00 PM</span>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/20 flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Tue, Thu</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">04:00 PM - 08:00 PM</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="pt-4 border-t border-outline-variant/30 space-y-3">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors clinical-shadow-hover">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+                                Book Appointment Now
+                            </button>
+<button class="w-full bg-transparent hover:bg-surface-variant border border-secondary text-secondary font-label-md text-label-md py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+                                Video Consultation
+                            </button>
+</div>
+<div class="text-center">
+<p class="font-caption text-caption text-outline">
+                                For urgent assistance, contact Emergency directly.
+                            </p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Similar Specialists -->
+<section class="pt-12 border-t border-outline-variant/20">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Related Specialists</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Doctor Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg clinical-shadow border border-outline-variant/20 overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A portrait of a professional female cardiac surgeon in her 40s wearing surgical scrubs and a stethoscope. She looks confident and capable in a well-lit hospital setting. Soft teal color grading. High quality medical photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPbhF3N12HC-7V3QSkgAtMbZBPl-t8D0q7_Kbkk1VQLUheGVH5z11BE-nntwf8QHOB6GHDAZbW61FG70Gfi4TCQ0muMwqd9LtEs18xFXGhIbsmVG6EwKQ7z-I_t9AUUba3q4rXSs6m0KwB5WlNbhVD2ougSw0ltRVgIka2c6yI8PnbV7vtOzxLlMjnjp4_AAGdW0UkkZfPSBrt4CUPQcMMtmfUgxPzccGJklg2hlozI2El_zsFEZBTKP4yPfJqBlZhgf4qjYreLPM"/>
+</div>
+<div class="p-5">
+<div class="text-xs font-semibold text-primary mb-1 uppercase tracking-wider">Cardiac Surgery</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Dr. Anitha Menon</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4">MBBS, MS, MCh (Cardiothoracic)</p>
+<a class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md hover:underline" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Doctor Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg clinical-shadow border border-outline-variant/20 overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A portrait of an experienced male cardiologist in his 50s wearing a white coat over a light blue shirt. He has a warm, assuring smile. Clinical environment background with soft lighting. Teal and white aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMilYpnrCKVsrdYs9_TlPIuQEexd2BegbZoMVz6sJPeem8bQR4EoUoZF3OqLMU8QXJJ36jwSvRWmnE5KOGKb6CAwJJzWeL5KY7x6zmooFqPwqsKYwp6j9Vc-PnR65mSfwEKSRnJue68P-w3PBzV9y7y1WmvDPF_hNTENnj-tLmyHAJ8IIDPO9YfID6NCv5UPubgJPLnzm2ZJKBZrAmES203Fa7mjxEBOvLbIvp-7O8RUiGPPNH-MD3q1CLps0G2nUE1dVWTDyqTlY"/>
+</div>
+<div class="p-5">
+<div class="text-xs font-semibold text-primary mb-1 uppercase tracking-wider">Cardiology</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Dr. V. Karthikeyan</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4">MD, DM (Cardiology), FACC</p>
+<a class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md hover:underline" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Doctor Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg clinical-shadow border border-outline-variant/20 overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A portrait of a young professional female pediatric cardiologist in her 30s. She is smiling warmly, wearing a white lab coat. The setting is a clean, bright medical clinic with teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoV3cFGqEe97k8DK8OEbk4wGaOX_sqqk7vjrAXwdPDfrXR_heWIP0ladWJhp1ub2wsfrmsMGUJ3JG-rtKBMG8qW7cQjLpTtb-DlMfS8Zd50PynMkJyxBfGWsv24vt0g6uZ4FB9Q0R9jHR2r09Sn4jX5buK6pPqsrETCdRJp-sOe7ISIuq7qIWfxKQvY3idrGy4ATOnwMz1irigNU3Di08cprjFlEXko6RPwRSFHf-74byr522y_Xn2jhAKdBYtknyXsyT4M2FIf4k"/>
+</div>
+<div class="p-5">
+<div class="text-xs font-semibold text-primary mb-1 uppercase tracking-wider">Pediatric Cardiology</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Dr. S. Nithya</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4">MD (Pediatrics), FNB (Pediatric Cardiology)</p>
+<a class="inline-flex items-center gap-1 text-secondary font-label-md text-label-md hover:underline" href="#">
+                            View Profile <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full mt-24">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<span class="font-headline-sm text-headline-sm text-on-surface dark:text-inverse-on-surface">Thamarai Multispeciality</span>
+<span class="font-caption text-caption text-primary dark:text-primary-fixed-dim">© 2024 Thamarai Multispeciality Hospital. All rights reserved.</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:underline transition-all opacity-90 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:underline transition-all opacity-90 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:underline transition-all opacity-90 hover:opacity-100" href="#">Patient Rights</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant hover:underline transition-all opacity-90 hover:opacity-100" href="#">Careers</a>
+</div>
+</div>
+</footer>
+</body></html>

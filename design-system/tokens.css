@@ -1,0 +1,101 @@
+/* Thamarai Hospital — design tokens */
+/* Source: Stitch design system "Compassionate Clinical Excellence" */
+
+:root {
+  /* colors */
+  --color-background: #f7f9fb;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-inverse-on-surface: #eff1f3;
+  --color-inverse-primary: #6bd8cb;
+  --color-inverse-surface: #2d3133;
+  --color-on-background: #191c1e;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #f4fffc;
+  --color-on-primary-fixed: #00201d;
+  --color-on-primary-fixed-variant: #005049;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #fefcff;
+  --color-on-secondary-fixed: #00174b;
+  --color-on-secondary-fixed-variant: #003ea8;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #3d4947;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #f6fff5;
+  --color-on-tertiary-fixed: #00210f;
+  --color-on-tertiary-fixed-variant: #00522d;
+  --color-outline: #6d7a77;
+  --color-outline-variant: #bcc9c6;
+  --color-primary: #00685f;
+  --color-primary-container: #008378;
+  --color-primary-fixed: #89f5e7;
+  --color-primary-fixed-dim: #6bd8cb;
+  --color-secondary: #0051d5;
+  --color-secondary-container: #316bf3;
+  --color-secondary-fixed: #dbe1ff;
+  --color-secondary-fixed-dim: #b4c5ff;
+  --color-surface: #f7f9fb;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-container: #eceef0;
+  --color-surface-container-high: #e6e8ea;
+  --color-surface-container-highest: #e0e3e5;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-dim: #d8dadc;
+  --color-surface-tint: #006a61;
+  --color-surface-variant: #e0e3e5;
+  --color-tertiary: #006a3c;
+  --color-tertiary-container: #08864e;
+  --color-tertiary-fixed: #8ff8b4;
+  --color-tertiary-fixed-dim: #73db9a;
+
+  /* brand overrides */
+  --brand-primary: #0d9488;
+  --brand-secondary: #2563eb;
+  --brand-tertiary: #86efac;
+  --brand-neutral: #f8fafc;
+  --brand-custom: #0d9488;
+
+  /* spacing */
+  --space-base: 8px;
+  --space-container-max: 1280px;
+  --space-gutter: 24px;
+  --space-margin-desktop: 64px;
+  --space-margin-mobile: 20px;
+
+  /* typography */
+  --font-body-lg-size: 18px;
+  --font-body-lg-weight: 400;
+  --font-body-lg-line: 28px;
+  --font-body-md-size: 16px;
+  --font-body-md-weight: 400;
+  --font-body-md-line: 24px;
+  --font-caption-size: 12px;
+  --font-caption-weight: 400;
+  --font-caption-line: 16px;
+  --font-headline-lg-size: 48px;
+  --font-headline-lg-weight: 700;
+  --font-headline-lg-line: 56px;
+  --font-headline-lg-tracking: -0.02em;
+  --font-headline-lg-mobile-size: 32px;
+  --font-headline-lg-mobile-weight: 700;
+  --font-headline-lg-mobile-line: 40px;
+  --font-headline-lg-mobile-tracking: -0.02em;
+  --font-headline-md-size: 30px;
+  --font-headline-md-weight: 600;
+  --font-headline-md-line: 38px;
+  --font-headline-md-tracking: -0.01em;
+  --font-headline-sm-size: 24px;
+  --font-headline-sm-weight: 600;
+  --font-headline-sm-line: 32px;
+  --font-label-md-size: 14px;
+  --font-label-md-weight: 500;
+  --font-label-md-line: 20px;
+  --font-label-md-tracking: 0.05em;
+
+  --font-family-body: Inter, sans-serif;
+  --font-family-headline: Inter, sans-serif;
+  --radius: 8px; /* ROUND_EIGHT */
+}

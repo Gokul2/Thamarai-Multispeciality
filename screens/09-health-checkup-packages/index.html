@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Health Checkup Packages - Thamarai Multispeciality</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#f6fff5",
+                        "on-secondary-fixed": "#00174b",
+                        "background": "#f7f9fb",
+                        "primary-container": "#008378",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-container": "#316bf3",
+                        "outline": "#6d7a77",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#006a61",
+                        "secondary": "#0051d5",
+                        "tertiary": "#006a3c",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#3d4947",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "tertiary-container": "#08864e",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary-fixed-variant": "#005049",
+                        "inverse-surface": "#2d3133",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#bcc9c6",
+                        "on-primary-container": "#f4fffc",
+                        "on-tertiary-fixed-variant": "#00522d",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#6bd8cb",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#8ff8b4",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#89f5e7",
+                        "surface": "#f7f9fb",
+                        "on-primary-fixed": "#00201d",
+                        "on-surface": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#00685f",
+                        "on-tertiary-fixed": "#00210f",
+                        "surface-container": "#eceef0",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed": "#dbe1ff",
+                        "tertiary-fixed-dim": "#73db9a",
+                        "surface-variant": "#e0e3e5",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clinical-shadow { box-shadow: 0 4px 20px rgba(13, 148, 136, 0.05); }
+        .clinical-shadow-hover:hover { box-shadow: 0 8px 30px rgba(13, 148, 136, 0.08); transform: translateY(-4px); }
+        body { background-color: #F8FAFC; color: #191c1e; }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-md dark:bg-inverse-surface/90 docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none w-full border-b-0">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">
+                Thamarai Multispeciality
+            </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg px-3 py-2 transition-all active:scale-95 duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg px-3 py-2 transition-all active:scale-95 duration-200" href="#">Specialities</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg px-3 py-2 transition-all active:scale-95 duration-200" href="#">Doctors</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-body-md text-body-md active:scale-95 transition-transform duration-200" href="#">Health Packages</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg px-3 py-2 transition-all active:scale-95 duration-200" href="#">About</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg px-3 py-2 transition-all active:scale-95 duration-200" href="#">Contact</a>
+</nav>
+<div class="hidden lg:flex items-center gap-4">
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">phone_in_talk</span>
+                    Emergency: 0424-1234567
+                </span>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+                    Book Appointment
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-primary text-sm">health_and_safety</span>
+<span class="font-label-md text-label-md text-primary">Preventive Healthcare</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+                    Comprehensive Health Checkup Packages
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Invest in your wellbeing with our meticulously designed diagnostic packages. Early detection is the cornerstone of a long, healthy life.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md">
+                        Explore Packages
+                    </button>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[500px] shadow-lg clinical-shadow">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A bright, modern hospital reception area with warm lighting, featuring a professional female doctor in a white coat consulting with a smiling patient. The environment is clean, reassuring, and conveys trust and precision in healthcare." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWw3B7arps4lqYl-xBaohCQGCwwgL1bl3eKd0EIbYCrgkerX66qjT5RK89zQUTFU1vZatsbslccT-IcvaoRq0RnyHWSEGUs446HRh0v4rZ3IcaSKT-Qp7vSjbe5z0Bo7nMXUlS4L0q-35gVhbqwTlEMGwmJ2kaLCwincBESMPYn2M3AT2YFrP6S4m7Qi_VyTEBq_Tv8dbWrmsiLbg2n3WTv7_Wqt7PvWp3sFypGMAiyxfjdetwVpF4DuY4De8WGwC_ZVRLp9lPPxQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline mt-32">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="space-y-4 col-span-1 md:col-span-2">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim">
+                    Thamarai Multispeciality
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                    Dedicated to providing compassionate, high-quality healthcare using advanced medical technology and a patient-first approach.
+                </p>
+<p class="font-caption text-caption text-outline mt-8">
+                    © 2024 Thamarai Multispeciality Hospital. All rights reserved. Erode, Tamil Nadu.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200 cursor-pointer block font-body-md text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200 cursor-pointer block font-body-md text-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200 cursor-pointer block font-body-md text-body-md" href="#">Patient Rights</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md font-bold text-on-surface">More</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200 cursor-pointer block font-body-md text-body-md" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:translate-x-1 transition-transform duration-200 cursor-pointer block font-body-md text-body-md" href="#">Sitemap</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
