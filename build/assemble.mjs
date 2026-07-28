@@ -464,8 +464,36 @@ function normalizeChips(buttons, scope, valueFor) {
   });
 }
 
+// Rewrite a class string on the first elements whose class matches `test`
+function rewriteClass(container, test, fn) {
+  container.querySelectorAll('[class]').forEach((el) => {
+    const c = el.getAttribute('class') || '';
+    if (test.test(c)) el.setAttribute('class', fn(c));
+  });
+}
+
+// Fix Stitch bento/hero blocks that don't collapse well on small screens
+function fixMobileLayout(container, out) {
+  if (out === 'index.html') {
+    // Hero: main image was col-span-8 (≈58% width) with siblings hidden on mobile →
+    // awkward part-width tall block. Make it full-width until sm, and shorten the box.
+    rewriteClass(container, /\bcol-span-8\b.*\brow-span-6\b/, (c) => c.replace(/\bcol-span-8\b/, 'col-span-12 sm:col-span-8'));
+    rewriteClass(container, /\blg:col-span-7\b.*\bh-\[500px\]/, (c) => c.replace(/\bh-\[500px\]/, 'h-[300px] sm:h-[460px] lg:h-[500px]'));
+  }
+  if (out === 'about.html') {
+    // Infrastructure bento: fixed 800px on mobile crams 4 tiles. Give each tile a real
+    // row height and let the grid grow naturally on small screens.
+    rewriteClass(container, /grid-cols-1\b.*md:grid-cols-4.*\bh-\[800px\]/,
+      (c) => c.replace(/\bh-\[800px\]/, 'auto-rows-[210px] h-auto md:auto-rows-auto'));
+  }
+  if (out === 'diagnostics.html') {
+    rewriteClass(container, /\bw-full\b.*\bh-\[600px\]/, (c) => c.replace(/\bh-\[600px\]/, 'h-auto min-h-[360px] md:h-[600px]'));
+  }
+}
+
 function enhancePage(container, page) {
   const out = page.out;
+  fixMobileLayout(container, out);
 
   // a11y: 'text-outline' (#6d7a77) is a border/icon tone that fails 4.5:1 as body text.
   // Upgrade it to 'on-surface-variant' on text-bearing elements (leave icons alone).
