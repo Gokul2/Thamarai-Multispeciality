@@ -17,3 +17,6 @@ build/serve.log
 
 # Scratch
 *.tmp
+
+# Vercel local link
+.vercel/
