@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thamarai Multispeciality Hospital — Brand Playbook</title>
+<meta name="description" content="The brand playbook and governance system for Thamarai Multispeciality Hospital: promise, colour, type, logo, grid, principles, components, applications, voice and QC." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Digital UI system — teal-led, drawn from the lotus gradient */
+    --primary:#00685f; --primary-container:#008378; --on-primary:#fff; --on-primary-container:#f4fffc;
+    --secondary:#2563eb; --tertiary:#006a3c; --tertiary-container:#08864e;
+    --error:#ba1a1a; --error-container:#ffdad6;
+    /* Identity mark palette — the logo's own colours */
+    --brand-navy:#124e86; --brand-green:#0a7a3d; --lotus-blue:#0078c0; --lotus-teal:#00787e;
+    /* Neutrals */
+    --bg:#f7f9fb; --surface:#fff; --surface-2:#eef1f4; --surface-3:#e0e3e5;
+    --ink:#191c1e; --ink-2:#3d4947; --outline:#6d7a77; --outline-2:#bcc9c6;
+    --ok:#0a7a3d; --ok-bg:#e7f4ec; --no:#ba1a1a; --no-bg:#fdecec;
+    --radius:12px; --radius-sm:8px;
+    --shadow:0 4px 20px rgba(13,148,136,.06); --shadow-lg:0 12px 40px rgba(13,148,136,.10);
+    --maxw:1180px;
+    --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{margin:0;line-height:1.2;letter-spacing:-.02em}
+  p{margin:0 0 1rem}
+  a{color:var(--primary)}
+  .msym{font-family:'Material Symbols Outlined';font-weight:400;font-style:normal;line-height:1;vertical-align:middle;-webkit-font-feature-settings:'liga';font-feature-settings:'liga'}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+
+  /* ---------- Cover ---------- */
+  .cover{background:
+      radial-gradient(1200px 500px at 80% -10%, rgba(0,120,192,.10), transparent 60%),
+      radial-gradient(1000px 500px at 0% 110%, rgba(10,122,61,.10), transparent 55%),
+      linear-gradient(180deg,#fff, var(--bg));
+      border-bottom:1px solid var(--outline-2)}
+  .cover .wrap{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,88px)}
+  .cover img.logo{height:56px;width:auto;margin-bottom:2.5rem}
+  .kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);background:rgba(0,104,95,.08);border:1px solid rgba(0,104,95,.16);padding:.4rem .9rem;border-radius:999px}
+  .cover h1{font-size:clamp(2.6rem,7vw,4.5rem);font-weight:700;margin:1.4rem 0 .6rem}
+  .cover .lead{font-size:clamp(1.05rem,2.4vw,1.4rem);color:var(--ink-2);max-width:34ch}
+  .cover .grad{background:linear-gradient(100deg,var(--lotus-blue),var(--lotus-teal) 45%,var(--brand-green));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .meta{display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--outline-2)}
+  .meta div{font-size:14px}
+  .meta .k{color:var(--outline);text-transform:uppercase;letter-spacing:.06em;font-size:11px;font-weight:600;margin-bottom:.2rem}
+  .meta .v{color:var(--ink);font-weight:600}
+
+  /* ---------- Layout ---------- */
+  .shell{display:grid;grid-template-columns:260px 1fr;gap:0;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+  nav.toc{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:2.5rem 1.5rem 2rem 0;border-right:1px solid var(--outline-2)}
+  nav.toc .tl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--outline);margin:0 0 1rem .6rem}
+  nav.toc a{display:flex;gap:.7rem;align-items:baseline;padding:.5rem .7rem;border-radius:8px;color:var(--ink-2);text-decoration:none;font-size:14px;font-weight:500}
+  nav.toc a .n{font-variant-numeric:tabular-nums;color:var(--outline);font-size:12px;min-width:1.1em}
+  nav.toc a:hover{background:var(--surface-2);color:var(--ink)}
+  nav.toc a.active{background:rgba(0,104,95,.10);color:var(--primary);font-weight:600}
+  nav.toc a.active .n{color:var(--primary)}
+  main{min-width:0;padding:2.5rem 0 4rem 3rem}
+
+  /* ---------- Section ---------- */
+  section{scroll-margin-top:1.5rem;padding:2.2rem 0 2.6rem;border-bottom:1px solid var(--outline-2)}
+  section:last-of-type{border-bottom:0}
+  .snum{display:inline-flex;align-items:center;justify-content:center;width:2.4rem;height:2.4rem;border-radius:10px;background:var(--primary);color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:1rem}
+  section h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:700}
+  section .sub{color:var(--ink-2);font-size:1.05rem;margin:.6rem 0 1.6rem;max-width:70ch}
+  h3.block{font-size:1.15rem;font-weight:600;margin:2rem 0 .8rem;letter-spacing:-.01em}
+  h4.mini{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--outline);margin:1.4rem 0 .6rem}
+
+  /* ---------- Callouts ---------- */
+  .callout{border-radius:var(--radius);padding:1.1rem 1.3rem;margin:1rem 0;border:1px solid;display:flex;gap:.85rem;align-items:flex-start}
+  .callout .msym{font-size:22px;margin-top:1px;flex:none}
+  .callout p{margin:0}
+  .callout .lab{font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:.25rem}
+  .callout.purpose{background:rgba(0,104,95,.06);border-color:rgba(0,104,95,.20);color:#0a4d47}
+  .callout.purpose .msym{color:var(--primary)}
+  .callout.why{background:rgba(37,99,235,.06);border-color:rgba(37,99,235,.20);color:#173a8a}
+  .callout.why .msym{color:var(--secondary)}
+  .callout.best{background:rgba(10,122,61,.07);border-color:rgba(10,122,61,.22);color:#0a4d2c}
+  .callout.best .msym{color:var(--tertiary-container)}
+
+  /* ---------- Do / Don't ---------- */
+  .dd{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+  .card{background:var(--surface);border:1px solid var(--outline-2);border-radius:var(--radius);padding:1.1rem 1.2rem;box-shadow:var(--shadow)}
+  .card.do{border-top:3px solid var(--ok)}
+  .card.dont{border-top:3px solid var(--no)}
+  .card .hd{display:flex;align-items:center;gap:.5rem;font-weight:700;margin-bottom:.6rem}
+  .card.do .hd{color:var(--ok)} .card.dont .hd{color:var(--no)}
+  .card ul{margin:0;padding-left:1.1rem} .card li{margin:.35rem 0;font-size:.95rem;color:var(--ink-2)}
+
+  /* ---------- Swatches ---------- */
+  .sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem;margin:1.2rem 0}
+  .sw{border:1px solid var(--outline-2);border-radius:var(--radius);overflow:hidden;background:#fff;cursor:pointer}
+  .sw .chip{height:78px;display:flex;align-items:flex-end;padding:.5rem .6rem}
+  .sw .chip .hex{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;background:rgba(255,255,255,.85);padding:.1rem .35rem;border-radius:5px;color:#111}
+  .sw .m{padding:.55rem .7rem}
+  .sw .m .nm{font-weight:600;font-size:.85rem}
+  .sw .m .rl{font-size:.72rem;color:var(--outline);margin-top:.1rem}
+
+  /* ---------- Type specimen ---------- */
+  .specimen{background:#fff;border:1px solid var(--outline-2);border-radius:var(--radius);overflow:hidden}
+  .specimen .row{display:grid;grid-template-columns:200px 1fr;gap:1rem;padding:1rem 1.3rem;border-bottom:1px solid var(--surface-2);align-items:center}
+  .specimen .row:last-child{border-bottom:0}
+  .specimen .spec{font-size:12px;color:var(--outline);font-variant-numeric:tabular-nums}
+  .specimen .spec b{display:block;color:var(--ink);font-size:13px;text-transform:none;letter-spacing:0}
+  @media(max-width:640px){.specimen .row{grid-template-columns:1fr;gap:.3rem}}
+
+  /* ---------- Component demos ---------- */
+  .demo{background:#fff;border:1px solid var(--outline-2);border-radius:var(--radius);padding:1.4rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;box-shadow:var(--shadow)}
+  .btn{font-family:inherit;font-weight:600;font-size:14px;letter-spacing:.02em;border-radius:8px;padding:.72rem 1.4rem;border:1.5px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;min-height:44px}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-secondary{background:transparent;border-color:var(--secondary);color:var(--secondary)}
+  .btn-tertiary{background:transparent;color:var(--primary);border:0;text-decoration:underline;text-underline-offset:3px}
+  .btn-error{background:var(--error);color:#fff}
+  .chip2{border:1px solid var(--outline-2);background:var(--surface-2);color:var(--ink-2);border-radius:999px;padding:.5rem 1.1rem;font-size:14px;font-weight:500}
+  .chip2.on{background:var(--primary);border-color:var(--primary);color:#fff}
+  .badge{display:inline-block;padding:.25rem .6rem;border-radius:6px;font-size:12px;font-weight:600;background:rgba(0,104,95,.10);color:var(--primary)}
+  .fld{display:flex;flex-direction:column;gap:.35rem;min-width:220px}
+  .fld label{font-size:13px;font-weight:600}
+  .fld input{font-family:inherit;padding:.7rem .9rem;border:1px solid var(--outline-2);border-radius:8px;font-size:15px;background:#fff}
+  .fld input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(0,104,95,.18)}
+  .democard{width:230px;background:#fff;border:1px solid var(--outline-2);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+  .democard .ph{height:96px;background:linear-gradient(120deg,var(--lotus-blue),var(--lotus-teal),var(--brand-green))}
+  .democard .bd{padding:1rem}
+  .spec-list{width:100%;border-collapse:collapse;font-size:.92rem;margin:.4rem 0}
+  .spec-list td{padding:.5rem .2rem;border-bottom:1px solid var(--surface-2);vertical-align:top}
+  .spec-list td:first-child{color:var(--outline);width:38%;font-weight:500}
+
+  /* ---------- Principle grid ---------- */
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1.2rem 0}
+  .pcard{background:#fff;border:1px solid var(--outline-2);border-radius:var(--radius);padding:1.3rem;box-shadow:var(--shadow)}
+  .pcard .ic{width:44px;height:44px;border-radius:11px;background:rgba(0,104,95,.10);color:var(--primary);display:flex;align-items:center;justify-content:center;margin-bottom:.8rem}
+  .pcard .ic .msym{font-size:24px}
+  .pcard h4{font-size:1.05rem;font-weight:600;margin-bottom:.35rem}
+  .pcard p{font-size:.92rem;color:var(--ink-2);margin:0}
+
+  /* ---------- Voice examples ---------- */
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+  .ba .b,.ba .a{border-radius:var(--radius);padding:1rem 1.2rem;font-size:.95rem}
+  .ba .b{background:var(--no-bg);border:1px solid #f2c4c4}
+  .ba .a{background:var(--ok-bg);border:1px solid #bfe3cd}
+  .ba .t{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem}
+  .ba .b .t{color:var(--no)} .ba .a .t{color:var(--ok)}
+
+  /* ---------- Checklist ---------- */
+  .check{background:#fff;border:1px solid var(--outline-2);border-radius:var(--radius);padding:.4rem 1.2rem;box-shadow:var(--shadow);margin:1rem 0}
+  .check .grp{font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--primary);padding:1rem .2rem .4rem}
+  .check label{display:flex;gap:.7rem;align-items:flex-start;padding:.55rem .2rem;border-top:1px solid var(--surface-2);cursor:pointer;font-size:.95rem}
+  .check .grp+label{border-top:0}
+  .check input{margin-top:.2rem;width:18px;height:18px;accent-color:var(--primary);flex:none}
+  .check label span small{display:block;color:var(--outline);font-size:.82rem}
+  .check input:checked+span{color:var(--outline);text-decoration:line-through}
+
+  .tag{display:inline-block;font-size:11px;font-weight:600;padding:.15rem .5rem;border-radius:5px;background:var(--surface-2);color:var(--ink-2);margin-left:.4rem;letter-spacing:.02em}
+  .rule{display:flex;gap:.6rem;align-items:baseline;padding:.5rem 0;border-bottom:1px dashed var(--outline-2);font-size:.95rem}
+  .rule .msym{color:var(--primary);font-size:18px}
+  footer.pb{padding:3rem 0;text-align:center;color:var(--outline);font-size:13px;background:#fff;border-top:1px solid var(--outline-2)}
+
+  @media(max-width:900px){
+    .shell{grid-template-columns:1fr}
+    nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--outline-2);padding:1rem 0;display:flex;flex-wrap:wrap;gap:.3rem}
+    nav.toc .tl{width:100%}
+    nav.toc a{font-size:13px;padding:.4rem .6rem}
+    main{padding:1.5rem 0 3rem}
+    .dd,.ba{grid-template-columns:1fr}
+  }
+  @media(max-width:520px){.meta{gap:1.2rem}}
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<header class="cover">
+  <div class="wrap">
+    <img class="logo" src="./logo.png" alt="Thamarai Multispeciality Hospital" />
+    <span class="kicker"><span class="msym">menu_book</span> Brand Playbook &amp; Governance System</span>
+    <h1>Compassionate<br><span class="grad">Clinical Excellence</span></h1>
+    <p class="lead">The single source of truth for how Thamarai looks, feels, speaks and behaves — everywhere.</p>
+    <div class="meta">
+      <div><div class="k">Brand</div><div class="v">Thamarai Multispeciality Hospital</div></div>
+      <div><div class="k">Location</div><div class="v">Erode, Tamil Nadu</div></div>
+      <div><div class="k">Version</div><div class="v">1.0</div></div>
+      <div><div class="k">Applies to</div><div class="v">Design · Development · Marketing</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+  <!-- ============ TOC ============ -->
+  <nav class="toc" id="toc">
+    <p class="tl">Contents</p>
+    <a href="#overview"><span class="n">01</span> Overview</a>
+    <a href="#promise"><span class="n">02</span> Brand Promise</a>
+    <a href="#color"><span class="n">03</span> Color Palette</a>
+    <a href="#type"><span class="n">04</span> Typography</a>
+    <a href="#logo"><span class="n">05</span> Logo System</a>
+    <a href="#grid"><span class="n">06</span> Grid &amp; Spacing</a>
+    <a href="#principles"><span class="n">07</span> Design Principles</a>
+    <a href="#components"><span class="n">08</span> Components</a>
+    <a href="#applications"><span class="n">09</span> Applications</a>
+    <a href="#voice"><span class="n">10</span> Voice &amp; Tone</a>
+    <a href="#qc"><span class="n">11</span> QC Checklist</a>
+  </nav>
+
+  <main>
+    <!-- ===== 01 OVERVIEW ===== -->
+    <section id="overview">
+      <div class="snum">1</div>
+      <h2>Overview</h2>
+      <p class="sub">What this document is, who it serves, and how to use it so that every screen, print piece and sentence feels unmistakably Thamarai.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To set the intent and rules of engagement for the brand system — a shared reference that removes guesswork and keeps a growing team consistent.</p></div>
+
+      <p>This playbook is the <strong>governance layer</strong> that sits above the website, the app, print collateral and social media. It exists so that a designer in year three makes the same core decisions a designer made on day one — not by memory, but by system.</p>
+
+      <h3 class="block">Why a playbook exists</h3>
+      <p>Healthcare is a <strong>trust business</strong>. Patients infer competence and safety from consistency: a hospital whose signage, website and forms feel like one confident voice reads as more capable and more caring than one that feels stitched together. Every inconsistency (a stray shade of teal, a second typeface, an off-brand tone) is a small withdrawal from that trust account. This document protects the balance.</p>
+
+      <h3 class="block">Who it is for</h3>
+      <div class="pgrid">
+        <div class="pcard"><div class="ic"><span class="msym">design_services</span></div><h4>Designers</h4><p>Colour, type, spacing, components and the principles that resolve edge cases the rules don't cover.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">code</span></div><h4>Developers</h4><p>Exact tokens, component specs and accessibility gates that turn design intent into shippable code.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">campaign</span></div><h4>Marketing &amp; Content</h4><p>Voice, tone, terminology and application rules for campaigns, social and print.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">handshake</span></div><h4>Partners &amp; Vendors</h4><p>Agencies and printers who need the assets and the guardrails to represent the brand correctly.</p></div>
+      </div>
+
+      <h3 class="block">How to use it</h3>
+      <div class="rule"><span class="msym">looks_one</span><span><b>Reference before you create.</b> Check the relevant section before starting a new page, asset or campaign.</span></div>
+      <div class="rule"><span class="msym">looks_two</span><span><b>Follow the principle, not just the pixel.</b> When a rule doesn't cover your case, apply §7 Design Principles to decide.</span></div>
+      <div class="rule"><span class="msym">looks_3</span><span><b>Propose changes through governance.</b> The brand should evolve — but deliberately. Log proposed changes, version the document, and update tokens in one place.</span></div>
+
+      <div class="callout best"><span class="msym">verified</span><p><span class="lab">Best practice</span>Treat the design tokens (colour, type, spacing) as the <strong>source of truth in code</strong>. When a value changes here, it should change in one token file and cascade — never be hand-edited page by page.</p></div>
+
+      <h3 class="block">The brand in one breath</h3>
+      <p><strong>Thamarai</strong> means <em>lotus</em> in Tamil — a flower that grows pure and beautiful from difficult water, an ancient symbol of health, renewal and calm. That is the brand's whole idea: <strong>advanced, precise medicine delivered with genuine human warmth</strong>, for the people of Erode and its surrounding districts.</p>
+    </section>
+
+    <!-- ===== 02 BRAND PROMISE ===== -->
+    <section id="promise">
+      <div class="snum">2</div>
+      <h2>Brand Promise</h2>
+      <p class="sub">The commitment we make to every patient, and the feeling the brand must create to keep it.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To fix the emotional and strategic core of the brand so that colour, type, imagery and words all pull in one direction.</p></div>
+
+      <h3 class="block">The promise</h3>
+      <p style="font-size:1.5rem;font-weight:600;color:var(--primary);max-width:22ch;line-height:1.3;letter-spacing:-.02em">"Healthcare you can trust."</p>
+      <p>Expressed as an internal essence: <strong>Compassionate Clinical Excellence</strong> — the meeting point of a warm human hand and a steady clinical one.</p>
+
+      <h3 class="block">Positioning statement</h3>
+      <div class="callout why"><span class="msym">my_location</span><p><span class="lab">For / who / that</span>For the people of <strong>Erode and surrounding districts</strong>, who need serious medical care close to home, <strong>Thamarai Multispeciality Hospital</strong> is the multispeciality hospital that delivers <strong>advanced, technology-driven treatment with genuine compassion</strong> — so families feel both safe and cared for.</p></div>
+
+      <h3 class="block">The three pillars</h3>
+      <p>Every design and content decision should reinforce at least one pillar and never contradict another.</p>
+      <div class="pgrid">
+        <div class="pcard"><div class="ic"><span class="msym">shield_with_heart</span></div><h4>Trust</h4><p><strong>Shows up as:</strong> consistency, clarity, credentials, calm. <strong>Why:</strong> patients are anxious and high-stakes; trust is the currency that lets them choose us.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">volunteer_activism</span></div><h4>Compassion</h4><p><strong>Shows up as:</strong> warm imagery, reassuring microcopy, generous space, human faces. <strong>Why:</strong> care is felt, not claimed.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">precision_manufacturing</span></div><h4>Precision</h4><p><strong>Shows up as:</strong> exact grids, accurate information, restrained design, modern technology cues. <strong>Why:</strong> precision signals clinical competence.</p></div>
+      </div>
+
+      <h3 class="block">Brand personality</h3>
+      <p>If Thamarai were a person: a <strong>senior consultant who is deeply competent yet unhurried and kind</strong> — speaks plainly, never talks down, and makes you feel you are in safe hands. Warm, professional, calm, reassuring.</p>
+
+      <div class="dd">
+        <div class="card do"><div class="hd"><span class="msym">check_circle</span>The promise is kept when…</div><ul>
+          <li>An anxious visitor finds the emergency number and "Book Appointment" in seconds.</li>
+          <li>Imagery shows real care and real people, not stock clichés.</li>
+          <li>Copy explains, reassures, and respects the reader's intelligence.</li>
+        </ul></div>
+        <div class="card dont"><div class="hd"><span class="msym">cancel</span>The promise breaks when…</div><ul>
+          <li>The brand shouts, over-sells, or uses fear to drive action.</li>
+          <li>Design feels cold, clinical-only, or corporate and generic.</li>
+          <li>Jargon or clutter makes a worried patient work harder.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <!-- ===== 03 COLOR ===== -->
+    <section id="color">
+      <div class="snum">3</div>
+      <h2>Color Palette</h2>
+      <p class="sub">Two connected layers: the identity mark's own colours, and the teal-led digital system drawn from them.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To define exact colour values, the role each plays, and the rules that keep colour meaningful rather than decorative.</p></div>
+
+      <div class="callout why"><span class="msym">psychology</span><p><span class="lab">The strategic idea</span>The logo's lotus is a <strong>blue → teal → green gradient</strong>. Blue carries <em>trust</em>, green carries <em>wellness and renewal</em>, and the <strong>teal where they meet is healing itself</strong>. We pulled the interface's primary colour from that teal, so the product and the mark feel like one organism. Teal also sidesteps the "corporate hospital blue" cliché while still reading calm, clean and clinical.</p></div>
+
+      <h3 class="block">Identity mark palette <span class="tag">logo &amp; print</span></h3>
+      <p>The logo's own colours. Use them for the mark and print identity; do not recolour the logo to match the UI.</p>
+      <div class="sw-grid">
+        <div class="sw" data-hex="#124e86"><div class="chip" style="background:#124e86"><span class="hex">#124E86</span></div><div class="m"><div class="nm">Brand Navy</div><div class="rl">Wordmark · trust</div></div></div>
+        <div class="sw" data-hex="#0a7a3d"><div class="chip" style="background:#0a7a3d"><span class="hex">#0A7A3D</span></div><div class="m"><div class="nm">Brand Green</div><div class="rl">Tagline · wellness</div></div></div>
+        <div class="sw" data-hex="#0078c0"><div class="chip" style="background:#0078c0"><span class="hex">#0078C0</span></div><div class="m"><div class="nm">Lotus Blue</div><div class="rl">Gradient start</div></div></div>
+        <div class="sw" data-hex="#00787e"><div class="chip" style="background:#00787e"><span class="hex">#00787E</span></div><div class="m"><div class="nm">Lotus Teal</div><div class="rl">Gradient centre</div></div></div>
+      </div>
+
+      <h3 class="block">Digital UI system <span class="tag">web &amp; app</span></h3>
+      <p><strong>Primary teal is the interactive colour</strong> — buttons, links, active states, focus. Everything else is a supporting role. Click any swatch to copy its hex.</p>
+      <div class="sw-grid">
+        <div class="sw" data-hex="#00685f"><div class="chip" style="background:#00685f"><span class="hex" style="background:rgba(0,0,0,.25);color:#fff">#00685F</span></div><div class="m"><div class="nm">Primary</div><div class="rl">Actions · links · active</div></div></div>
+        <div class="sw" data-hex="#008378"><div class="chip" style="background:#008378"><span class="hex" style="background:rgba(0,0,0,.25);color:#fff">#008378</span></div><div class="m"><div class="nm">Primary Container</div><div class="rl">Feature blocks</div></div></div>
+        <div class="sw" data-hex="#2563eb"><div class="chip" style="background:#2563eb"><span class="hex" style="background:rgba(0,0,0,.25);color:#fff">#2563EB</span></div><div class="m"><div class="nm">Secondary</div><div class="rl">Info · secondary CTAs</div></div></div>
+        <div class="sw" data-hex="#08864e"><div class="chip" style="background:#08864e"><span class="hex" style="background:rgba(0,0,0,.25);color:#fff">#08864E</span></div><div class="m"><div class="nm">Tertiary</div><div class="rl">Wellness accents</div></div></div>
+        <div class="sw" data-hex="#ba1a1a"><div class="chip" style="background:#ba1a1a"><span class="hex" style="background:rgba(0,0,0,.25);color:#fff">#BA1A1A</span></div><div class="m"><div class="nm">Emergency</div><div class="rl">24/7 · errors only</div></div></div>
+        <div class="sw" data-hex="#f7f9fb"><div class="chip" style="background:#f7f9fb;border-bottom:1px solid #e0e3e5"><span class="hex">#F7F9FB</span></div><div class="m"><div class="nm">Surface</div><div class="rl">Page background</div></div></div>
+        <div class="sw" data-hex="#191c1e"><div class="chip" style="background:#191c1e"><span class="hex" style="background:rgba(255,255,255,.2);color:#fff">#191C1E</span></div><div class="m"><div class="nm">On-Surface</div><div class="rl">Headings · body</div></div></div>
+        <div class="sw" data-hex="#3d4947"><div class="chip" style="background:#3d4947"><span class="hex" style="background:rgba(255,255,255,.2);color:#fff">#3D4947</span></div><div class="m"><div class="nm">On-Surface Variant</div><div class="rl">Secondary text</div></div></div>
+      </div>
+
+      <div class="callout best"><span class="msym">balance</span><p><span class="lab">The 60 / 30 / 10 rule</span>Roughly <strong>60% neutral</strong> (surface + text), <strong>30% teal family</strong>, <strong>10% accent</strong> (secondary/tertiary). Red is reserved almost entirely for <strong>emergency and errors</strong> — its scarcity is what makes it read as urgent.</p></div>
+
+      <h4 class="mini">Contrast &amp; accessibility</h4>
+      <p>Every text/background pairing must meet <strong>WCAG AA</strong>: 4.5:1 for body text, 3:1 for large text and icons. Primary teal on white and white on primary teal both pass. Never place mid-grey text (the <code>outline</code> tone) on light surfaces as body copy — it fails.</p>
+
+      <div class="dd">
+        <div class="card do"><div class="hd"><span class="msym">check_circle</span>Do</div><ul>
+          <li>Use teal for one clear primary action per view.</li>
+          <li>Keep large fields of calm neutral around content.</li>
+          <li>Reserve red strictly for emergency and error states.</li>
+          <li>Pull every colour from the tokens — never eyeball a hex.</li>
+        </ul></div>
+        <div class="card dont"><div class="hd"><span class="msym">cancel</span>Don't</div><ul>
+          <li>Recolour the logo to match the UI teal.</li>
+          <li>Introduce gradients or shades not in this system.</li>
+          <li>Use red for non-urgent emphasis — it cries wolf.</li>
+          <li>Place two competing primary colours in one view.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <!-- ===== 04 TYPOGRAPHY ===== -->
+    <section id="type">
+      <div class="snum">4</div>
+      <h2>Typography</h2>
+      <p class="sub">One typeface, a disciplined scale, and rules that keep clinical information effortless to read.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To create a clear, legible hierarchy that works from a 48px headline down to a 12px lab-report caption — on any device.</p></div>
+
+      <div class="callout why"><span class="msym">psychology</span><p><span class="lab">Why Inter</span>A single family — <strong>Inter</strong> — carries the whole brand. It was engineered for screens: tall x-height and open shapes make it <strong>exceptionally legible at small sizes</strong>, which matters when the content is a medicine name or a test result. It is neutral and modern (competence without coldness), variable (one file, many weights), free, and covers the languages our patients read.</p></div>
+
+      <h3 class="block">The type scale</h3>
+      <div class="specimen">
+        <div class="row"><div class="spec"><b>Headline LG</b>48 / 56 · 700 · -0.02em</div><div style="font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1.1">Healthcare you can trust</div></div>
+        <div class="row"><div class="spec"><b>Headline MD</b>30 / 38 · 600 · -0.01em</div><div style="font-size:26px;font-weight:600;letter-spacing:-.01em">Centres of excellence</div></div>
+        <div class="row"><div class="spec"><b>Headline SM</b>24 / 32 · 600</div><div style="font-size:22px;font-weight:600">Cardiology department</div></div>
+        <div class="row"><div class="spec"><b>Body LG</b>18 / 28 · 400</div><div style="font-size:18px">Serving Erode and surrounding districts with compassionate, advanced care.</div></div>
+        <div class="row"><div class="spec"><b>Body MD</b>16 / 24 · 400</div><div style="font-size:16px">The default reading size for descriptions, forms and long-form content.</div></div>
+        <div class="row"><div class="spec"><b>Label MD</b>14 / 20 · 500 · +0.05em</div><div style="font-size:14px;font-weight:500;letter-spacing:.05em">BOOK APPOINTMENT</div></div>
+        <div class="row"><div class="spec"><b>Caption</b>12 / 16 · 400</div><div style="font-size:12px;color:var(--ink-2)">Indicative pricing · confirm at reception</div></div>
+      </div>
+
+      <h4 class="mini">Best practices</h4>
+      <div class="rule"><span class="msym">format_size</span><span><b>Body never below 16px.</b> Worried readers and older patients must not squint. 16px is the floor for body copy on web.</span></div>
+      <div class="rule"><span class="msym">format_line_spacing</span><span><b>Line-height ~1.5 for body.</b> Generous leading reduces cognitive load and improves scannability.</span></div>
+      <div class="rule"><span class="msym">straighten</span><span><b>Measure 60–75 characters.</b> Cap long text blocks so the eye can return to the next line comfortably.</span></div>
+      <div class="rule"><span class="msym">spellcheck</span><span><b>Tracking only on labels/caps.</b> +0.05em opens up small uppercase labels; body text stays at default tracking.</span></div>
+
+      <div class="dd">
+        <div class="card do"><div class="hd"><span class="msym">check_circle</span>Do</div><ul>
+          <li>Use weight and size (not colour) to build hierarchy.</li>
+          <li>Keep one clear H1 per page.</li>
+          <li>Left-align long-form text for readability.</li>
+        </ul></div>
+        <div class="card dont"><div class="hd"><span class="msym">cancel</span>Don't</div><ul>
+          <li>Introduce a second typeface "for headings".</li>
+          <li>Justify body text or centre long paragraphs.</li>
+          <li>Set clinical detail in light-grey low-contrast type.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <!-- ===== 05 LOGO ===== -->
+    <section id="logo">
+      <div class="snum">5</div>
+      <h2>Logo System</h2>
+      <p class="sub">The most valuable asset in the brand. These rules keep it recognisable, legible and respected everywhere it appears.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To govern how the identity mark is used, sized, spaced and protected — and how it must never be altered.</p></div>
+
+      <div class="demo" style="justify-content:center;background:#fff;padding:2.4rem">
+        <img src="./logo.png" alt="Thamarai full logo lockup" style="height:64px;width:auto" />
+      </div>
+
+      <div class="callout why"><span class="msym">local_florist</span><p><span class="lab">Meaning</span><strong>Thamarai</strong> is Tamil for <em>lotus</em> — purity and healing rising from troubled water. The mark fuses that lotus with a <strong>water droplet and a medical cross</strong> (life, medicine, care). Its <strong>blue → teal → green gradient</strong> travels from trust, through healing, to wellness. The navy wordmark grounds it in seriousness; the green tagline keeps it human.</p></div>
+
+      <h3 class="block">Logo variants</h3>
+      <div class="demo">
+        <div style="text-align:center"><img src="./logo.png" alt="Primary lockup" style="height:44px"><div class="badge" style="margin-top:.8rem">Primary lockup</div><p style="font-size:.85rem;color:var(--outline);margin:.5rem 0 0;max-width:20ch">Mark + wordmark + tagline. Default for headers, footers, print.</p></div>
+        <div style="width:1px;height:80px;background:var(--outline-2)"></div>
+        <div style="text-align:center"><img src="./logo-mark.png" alt="Lotus mark" style="height:56px"><div class="badge" style="margin-top:.8rem">The mark</div><p style="font-size:.85rem;color:var(--outline);margin:.5rem 0 0;max-width:20ch">Lotus only. For favicons, app icons and tight spaces.</p></div>
+      </div>
+
+      <h3 class="block">Clear space &amp; minimum size</h3>
+      <div class="rule"><span class="msym">crop_free</span><span><b>Clear space =</b> the height of the lotus mark on all four sides. Keep this padding free of text, images and edges.</span></div>
+      <div class="rule"><span class="msym">straighten</span><span><b>Minimum size — digital:</b> full lockup ≥ 120px wide; the mark alone ≥ 24px. <b>Print:</b> lockup ≥ 22mm wide.</span></div>
+      <div class="rule"><span class="msym">contrast</span><span><b>Backgrounds:</b> use on light/neutral surfaces (the mark is transparent). On photography or dark panels, place it inside a white rounded container — never let it fight a busy background.</span></div>
+
+      <div class="dd">
+        <div class="card do"><div class="hd"><span class="msym">check_circle</span>Do</div><ul>
+          <li>Use the supplied master files (transparent PNG / vector).</li>
+          <li>Give it room to breathe with full clear space.</li>
+          <li>Use the mark alone when space is tight.</li>
+        </ul></div>
+        <div class="card dont"><div class="hd"><span class="msym">cancel</span>Don't</div><ul>
+          <li>Stretch, squash, rotate or add shadows/outlines.</li>
+          <li>Recolour it, or place it on a clashing colour.</li>
+          <li>Rebuild the wordmark in a different font.</li>
+          <li>Crowd it against headlines, photos or page edges.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <!-- ===== 06 GRID ===== -->
+    <section id="grid">
+      <div class="snum">6</div>
+      <h2>Grid &amp; Spacing</h2>
+      <p class="sub">The invisible structure that gives every layout calm, order and clinical precision.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To define the spatial system — units, scale, container and rhythm — so layouts feel intentional and are effortless to build consistently.</p></div>
+
+      <div class="callout why"><span class="msym">grid_4x4</span><p><span class="lab">Why an 8-point grid</span>All spacing derives from an <strong>8px base unit</strong>. Eight divides cleanly, scales across screen densities, and gives designers and developers a shared vocabulary — "two units", not "about 15-ish pixels". The result is visual rhythm that reads as <em>precision</em>, reinforcing the clinical pillar.</p></div>
+
+      <h3 class="block">The spacing scale</h3>
+      <div class="demo" style="align-items:flex-end;gap:1.2rem">
+        <div style="text-align:center"><div style="width:8px;height:8px;background:var(--primary);border-radius:3px;margin:0 auto"></div><small style="font-size:11px;color:var(--outline);display:block;margin-top:.4rem">8 · xs</small></div>
+        <div style="text-align:center"><div style="width:16px;height:16px;background:var(--primary);border-radius:3px;margin:0 auto"></div><small style="font-size:11px;color:var(--outline);display:block;margin-top:.4rem">16 · sm</small></div>
+        <div style="text-align:center"><div style="width:24px;height:24px;background:var(--primary);border-radius:4px;margin:0 auto"></div><small style="font-size:11px;color:var(--outline);display:block;margin-top:.4rem">24 · gutter</small></div>
+        <div style="text-align:center"><div style="width:32px;height:32px;background:var(--primary);border-radius:5px;margin:0 auto"></div><small style="font-size:11px;color:var(--outline);display:block;margin-top:.4rem">32 · md</small></div>
+        <div style="text-align:center"><div style="width:48px;height:48px;background:var(--primary);border-radius:6px;margin:0 auto"></div><small style="font-size:11px;color:var(--outline);display:block;margin-top:.4rem">48 · lg</small></div>
+        <div style="text-align:center"><div style="width:64px;height:64px;background:var(--primary);border-radius:8px;margin:0 auto"></div><small style="font-size:11px;color:var(--outline);display:block;margin-top:.4rem">64 · xl</small></div>
+      </div>
+
+      <h3 class="block">Layout tokens</h3>
+      <table class="spec-list">
+        <tr><td>Base unit</td><td>8px — all spacing is a multiple of this</td></tr>
+        <tr><td>Content container</td><td>1280px max width, centred</td></tr>
+        <tr><td>Column gutter</td><td>24px</td></tr>
+        <tr><td>Page margin — mobile</td><td>20px</td></tr>
+        <tr><td>Page margin — desktop</td><td>64px</td></tr>
+        <tr><td>Corner radius</td><td>8px on cards, inputs and buttons (soft, approachable, not sharp or fully round)</td></tr>
+        <tr><td>Elevation</td><td>Soft teal-tinted shadow — <code>0 4px 20px rgba(13,148,136,.06)</code></td></tr>
+      </table>
+
+      <div class="callout best"><span class="msym">vertical_align_center</span><p><span class="lab">Best practice</span>Prefer <strong>generous whitespace over dense layouts</strong>. Space is not empty — it is calm. It gives anxious readers room to focus and signals confidence. When in doubt, add a unit.</p></div>
+
+      <div class="dd">
+        <div class="card do"><div class="hd"><span class="msym">check_circle</span>Do</div><ul>
+          <li>Snap every margin and padding to the 8px scale.</li>
+          <li>Keep consistent gutters and section rhythm.</li>
+          <li>Respect the 1280px container on large screens.</li>
+        </ul></div>
+        <div class="card dont"><div class="hd"><span class="msym">cancel</span>Don't</div><ul>
+          <li>Use arbitrary values like 13px or 27px.</li>
+          <li>Let content run edge-to-edge on wide monitors.</li>
+          <li>Mix sharp and round corners in one interface.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <!-- ===== 07 PRINCIPLES ===== -->
+    <section id="principles">
+      <div class="snum">7</div>
+      <h2>Design Principles</h2>
+      <p class="sub">The reasoning that resolves the decisions no rule can fully cover. When guidelines run out, these are the tie-breakers.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To encode the <em>why</em> behind the system so the team makes brand-true decisions in new, un-templated situations.</p></div>
+
+      <div class="pgrid">
+        <div class="pcard"><div class="ic"><span class="msym">spa</span></div><h4>1 · Clinical calm</h4><p>Restraint, whitespace and a quiet palette. A calm interface lowers anxiety and reads as competent and in-control.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">visibility</span></div><h4>2 · Clarity over cleverness</h4><p>The obvious solution beats the clever one. A worried patient should never have to decode the interface.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">favorite</span></div><h4>3 · Compassion in the details</h4><p>Warm photography, reassuring microcopy, human faces. Small kindnesses are where "care" is actually felt.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">accessibility_new</span></div><h4>4 · Accessible by default</h4><p>AA contrast, keyboard support, reduced-motion, real alt text — designed in from the start, not bolted on. Care means care for everyone.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">repeat</span></div><h4>5 · Consistency builds trust</h4><p>Same components, same patterns, same voice across every touchpoint. Predictability is reassuring in healthcare.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">smartphone</span></div><h4>6 · Mobile-first</h4><p>Most patients arrive on a phone, often in a hurry. Design the smallest screen first; the emergency number and booking are always within reach.</p></div>
+      </div>
+
+      <div class="callout best"><span class="msym">emergency</span><p><span class="lab">The tie-breaker</span>When two good options compete, choose the one that <strong>reduces a patient's anxiety fastest</strong>. That single test resolves most design debates on this brand.</p></div>
+    </section>
+
+    <!-- ===== 08 COMPONENTS ===== -->
+    <section id="components">
+      <div class="snum">8</div>
+      <h2>Components</h2>
+      <p class="sub">The reusable building blocks. Consistent components are what make dozens of pages feel like one considered product.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To specify the core UI parts — their anatomy, states and rules — so design and code stay in lockstep.</p></div>
+
+      <h3 class="block">Buttons</h3>
+      <div class="demo">
+        <button class="btn btn-primary">Book Appointment <span class="msym" style="font-size:18px">arrow_forward</span></button>
+        <button class="btn btn-secondary">Find a Doctor <span class="msym" style="font-size:18px">search</span></button>
+        <button class="btn btn-tertiary">Learn more</button>
+        <button class="btn btn-error">Emergency 1066</button>
+      </div>
+      <table class="spec-list">
+        <tr><td>Primary</td><td>Solid teal — the single most important action in a view. One per screen where possible.</td></tr>
+        <tr><td>Secondary</td><td>Outlined blue — an alternative action of lower priority.</td></tr>
+        <tr><td>Tertiary</td><td>Text link — low-emphasis inline actions.</td></tr>
+        <tr><td>Emergency</td><td>Solid red — reserved for the 24/7 helpline / critical actions only.</td></tr>
+        <tr><td>Size &amp; radius</td><td>Min height 44px (touch), 8px radius, 500-weight label with +0.02em tracking.</td></tr>
+        <tr><td>States</td><td>Hover (darken ~10%), focus (visible teal ring), active (slight press), disabled (reduced opacity).</td></tr>
+      </table>
+
+      <h3 class="block">Cards</h3>
+      <div class="demo">
+        <div class="democard"><div class="ph"></div><div class="bd"><div class="badge">Cardiology</div><h4 style="font-size:1.05rem;margin:.5rem 0 .3rem">Advanced Heart Care</h4><p style="font-size:.85rem;color:var(--ink-2);margin:0">Non-invasive diagnostics and interventional procedures.</p></div></div>
+        <table class="spec-list" style="flex:1;min-width:240px">
+          <tr><td>Surface</td><td>White on the neutral page background</td></tr>
+          <tr><td>Radius</td><td>12px outer, 8px inner elements</td></tr>
+          <tr><td>Elevation</td><td>Soft teal-tinted shadow; lifts 4px on hover</td></tr>
+          <tr><td>Clickability</td><td>If the card links somewhere, the whole card is the target (≥44px)</td></tr>
+        </table>
+      </div>
+
+      <h3 class="block">Inputs &amp; forms</h3>
+      <div class="demo">
+        <div class="fld"><label for="d1">Full Name</label><input id="d1" placeholder="Your name"></div>
+        <div class="fld"><label for="d2">Phone Number</label><input id="d2" placeholder="+91 98765 43210"></div>
+      </div>
+      <div class="rule"><span class="msym">label</span><span><b>Labels above fields, always visible</b> — never placeholder-only (placeholders vanish on typing and fail accessibility).</span></div>
+      <div class="rule"><span class="msym">center_focus_strong</span><span><b>Focus is obvious</b> — teal border + 3px teal ring, so keyboard users always know where they are.</span></div>
+      <div class="rule"><span class="msym">error</span><span><b>Errors are inline, next to the field</b>, in plain language — not a lump at the top of the form.</span></div>
+
+      <h3 class="block">Chips, badges &amp; nav</h3>
+      <div class="demo">
+        <span class="chip2 on">All</span><span class="chip2">Surgical</span><span class="chip2">Medical</span><span class="chip2">Diagnostic</span>
+        <span class="badge">NABH Inspired</span>
+      </div>
+      <p style="font-size:.92rem;color:var(--ink-2)">Filter chips use the pill shape with a clear active state (solid teal). Badges label and categorise. Navigation is consistent across every page, with a persistent "Book Appointment" and the emergency number always reachable.</p>
+
+      <div class="dd">
+        <div class="card do"><div class="hd"><span class="msym">check_circle</span>Do</div><ul>
+          <li>Reuse components; extend the system, don't fork it.</li>
+          <li>Keep one clear primary action per view.</li>
+          <li>Design every interactive state (hover, focus, disabled).</li>
+          <li>Guarantee 44×44px touch targets.</li>
+        </ul></div>
+        <div class="card dont"><div class="hd"><span class="msym">cancel</span>Don't</div><ul>
+          <li>Invent a one-off button or card style per page.</li>
+          <li>Stack multiple solid-teal buttons competing for attention.</li>
+          <li>Remove focus rings "for looks".</li>
+          <li>Use red buttons for anything non-urgent.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <!-- ===== 09 APPLICATIONS ===== -->
+    <section id="applications">
+      <div class="snum">9</div>
+      <h2>Applications</h2>
+      <p class="sub">How the system composes into real, recognisable screens — and the rules that keep those compositions on-brand.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To show the tokens, type and components working together, so new pages inherit the same structure instead of reinventing it.</p></div>
+
+      <h4 class="mini">Anatomy of a page</h4>
+      <div class="demo" style="flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.2rem;border-bottom:1px solid var(--outline-2)"><img src="./logo.png" style="height:26px"><div style="display:flex;gap:1rem;align-items:center;font-size:12px;color:var(--ink-2)"><span>Doctors</span><span>Departments</span><span class="btn btn-primary" style="min-height:0;padding:.35rem .8rem;font-size:12px">Book</span></div></div>
+        <div style="padding:1.6rem 1.2rem;background:linear-gradient(180deg,#fff,var(--bg))"><div class="badge">NABH Inspired Care</div><div style="font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin:.5rem 0">Healthcare You Can <span style="color:var(--primary)">Trust</span></div><p style="font-size:.9rem;color:var(--ink-2);max-width:44ch;margin:0 0 1rem">Serving Erode with 150 beds and 35+ specialist doctors.</p><span class="btn btn-primary" style="min-height:0;padding:.5rem 1rem;font-size:13px">Book Appointment</span></div>
+        <div style="padding:1rem 1.2rem;background:var(--surface-3);font-size:11px;color:var(--ink-2)">Footer · departments · contact · © Thamarai, Erode</div>
+      </div>
+
+      <h4 class="mini">Where the system shows up</h4>
+      <div class="pgrid">
+        <div class="pcard"><div class="ic"><span class="msym">web</span></div><h4>Website</h4><p>Consistent header/footer, hero pattern, doctor &amp; department cards, appointment and contact forms.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">emergency</span></div><h4>Emergency CTA</h4><p>Red helpline, always reachable, with a subtle pulse. The one place red leads.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">share</span></div><h4>Social &amp; OG</h4><p>Open Graph image, favicon and app icon all built from the lotus mark for instant recognition.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">print</span></div><h4>Print &amp; signage</h4><p>Full lockup, brand navy/green, clear space respected on cards, boards and forms.</p></div>
+      </div>
+
+      <div class="callout best"><span class="msym">dataset_linked</span><p><span class="lab">Best practice</span>New surfaces should be <strong>assembled from existing components and tokens</strong>. If a genuinely new pattern is needed, design it <em>into</em> the system (document it here) rather than as a one-off.</p></div>
+    </section>
+
+    <!-- ===== 10 VOICE ===== -->
+    <section id="voice">
+      <div class="snum">10</div>
+      <h2>Voice &amp; Tone</h2>
+      <p class="sub">How Thamarai sounds. The words carry as much of the promise as the pixels do.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To keep every sentence — from a hero headline to a form error — sounding like the same calm, competent, caring voice.</p></div>
+
+      <h3 class="block">Voice attributes</h3>
+      <div class="pgrid">
+        <div class="pcard"><div class="ic"><span class="msym">favorite</span></div><h4>Warm</h4><p>Human and kind. We speak to a person, not a "user" or a "case".</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">lightbulb</span></div><h4>Clear</h4><p>Plain language. Jargon is avoided or explained; sentences are short.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">verified_user</span></div><h4>Trustworthy</h4><p>Honest and accurate. We never over-promise or use fear to persuade.</p></div>
+        <div class="pcard"><div class="ic"><span class="msym">location_city</span></div><h4>Locally rooted</h4><p>Of Erode, for Erode. Familiar, respectful, culturally aware (Tamil &amp; English).</p></div>
+      </div>
+
+      <h3 class="block">Tone shifts by context</h3>
+      <table class="spec-list">
+        <tr><td>Emergency</td><td>Direct, calm, action-first. "Call 1066 now." No marketing language.</td></tr>
+        <tr><td>Marketing</td><td>Warm and hopeful, benefit-led, never boastful.</td></tr>
+        <tr><td>Forms &amp; UI</td><td>Simple, reassuring, guiding. "We'll call to confirm your slot."</td></tr>
+        <tr><td>Clinical info</td><td>Precise and plain. Accurate first; friendly second.</td></tr>
+      </table>
+
+      <h3 class="block">Before &amp; after</h3>
+      <div class="ba">
+        <div class="b"><div class="t">Off-brand</div>Submit your details and our executives will revert to you at the earliest regarding your query.</div>
+        <div class="a"><div class="t">On-brand</div>Send us your details and our care team will call you back within one working day.</div>
+      </div>
+      <div class="ba">
+        <div class="b"><div class="t">Off-brand</div>Don't ignore chest pain! Book NOW before it's too late!!</div>
+        <div class="a"><div class="t">On-brand</div>Chest pain should never wait. Our cardiology team is here 24/7 — call 1066.</div>
+      </div>
+
+      <h4 class="mini">Terminology</h4>
+      <div class="rule"><span class="msym">check</span><span>Say <b>"care team"</b>, not "staff" · <b>"patient"</b>, not "customer" · <b>"book an appointment"</b>, not "buy"/"purchase".</span></div>
+      <div class="rule"><span class="msym">check</span><span>Address the reader as <b>"you"</b>. Prefer active voice and everyday words.</span></div>
+
+      <div class="dd">
+        <div class="card do"><div class="hd"><span class="msym">check_circle</span>Do</div><ul>
+          <li>Lead with the patient's need and reassurance.</li>
+          <li>Keep sentences short; explain any medical term.</li>
+          <li>Be honest about what we can and can't promise.</li>
+        </ul></div>
+        <div class="card dont"><div class="hd"><span class="msym">cancel</span>Don't</div><ul>
+          <li>Use fear, urgency-spam or exclamation overload.</li>
+          <li>Hide behind corporate jargon ("revert", "kindly do the needful").</li>
+          <li>Make clinical claims we can't stand behind.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <!-- ===== 11 QC ===== -->
+    <section id="qc">
+      <div class="snum">11</div>
+      <h2>QC Checklist</h2>
+      <p class="sub">The governance gate. Nothing ships to patients until it clears this list. Tick as you go.</p>
+
+      <div class="callout purpose"><span class="msym">flag</span><p><span class="lab">Purpose of this section</span>To convert every guideline above into a concrete, testable pass/fail check — the last line of defence for brand and quality.</p></div>
+
+      <div class="check">
+        <div class="grp">Brand consistency</div>
+        <label><input type="checkbox"><span>Colours come only from the token set — no stray hexes<small>Teal leads; red reserved for emergency/errors.</small></span></label>
+        <label><input type="checkbox"><span>Type uses Inter and the defined scale only<small>One H1 per page; body ≥ 16px.</small></span></label>
+        <label><input type="checkbox"><span>Logo uses a master file, correct clear space, min size, unaltered</span></label>
+        <label><input type="checkbox"><span>Spacing snaps to the 8px grid; 1280px container respected</span></label>
+        <label><input type="checkbox"><span>Copy matches the voice — warm, clear, no jargon or fear</span></label>
+
+        <div class="grp">Accessibility (WCAG AA)</div>
+        <label><input type="checkbox"><span>Text contrast ≥ 4.5:1 (≥ 3:1 for large text &amp; icons)</span></label>
+        <label><input type="checkbox"><span>All images have meaningful <code>alt</code> text</span></label>
+        <label><input type="checkbox"><span>Visible keyboard focus on every interactive element + skip link</span></label>
+        <label><input type="checkbox"><span>Works with keyboard only; respects <code>prefers-reduced-motion</code></span></label>
+        <label><input type="checkbox"><span>Form fields have visible labels; errors are inline</span></label>
+
+        <div class="grp">Responsive &amp; layout</div>
+        <label><input type="checkbox"><span>Designed mobile-first; no horizontal scroll at 360–390px</span></label>
+        <label><input type="checkbox"><span>Touch targets ≥ 44×44px with adequate spacing</span></label>
+        <label><input type="checkbox"><span>Layouts reflow cleanly — no part-width or clipped blocks</span></label>
+
+        <div class="grp">Performance</div>
+        <label><input type="checkbox"><span>Images have width/height (no layout shift) and lazy-load below the fold</span></label>
+        <label><input type="checkbox"><span>No runtime CDN dependency for core styles; assets self-hosted</span></label>
+
+        <div class="grp">SEO &amp; metadata</div>
+        <label><input type="checkbox"><span>Unique, local-intent title &amp; meta description per page</span></label>
+        <label><input type="checkbox"><span>Canonical URL, Open Graph image, structured data (JSON-LD) present</span></label>
+        <label><input type="checkbox"><span>Sitemap &amp; robots current; local NAP consistent</span></label>
+
+        <div class="grp">Functionality</div>
+        <label><input type="checkbox"><span>Every link resolves; no dead buttons</span></label>
+        <label><input type="checkbox"><span>Forms validate and confirm; emergency number is reachable everywhere</span></label>
+      </div>
+
+      <div class="callout best"><span class="msym">task_alt</span><p><span class="lab">Governance rule</span>A release is "done" only when this checklist is <strong>fully ticked and signed off</strong> by a design and a development reviewer. Update the checklist here whenever the system grows.</p></div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="pb">
+  <div class="wrap">
+    <img src="./logo-mark.png" alt="" style="height:40px;margin-bottom:1rem">
+    <p style="margin:0">Thamarai Multispeciality Hospital — Brand Playbook v1.0 · Erode, Tamil Nadu</p>
+    <p style="margin:.3rem 0 0;font-size:12px">A living document. Propose changes through brand governance; version every update.</p>
+  </div>
+</footer>
+
+<script>
+  // Scrollspy — highlight the active section in the TOC
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+  var map = {};
+  links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.classList.remove('active');});
+        if(map[e.target.id]) map[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  document.querySelectorAll('section[id]').forEach(function(s){ obs.observe(s); });
+
+  // Click a swatch to copy its hex
+  document.querySelectorAll('.sw[data-hex]').forEach(function(sw){
+    sw.addEventListener('click', function(){
+      var hex = sw.getAttribute('data-hex');
+      if(navigator.clipboard) navigator.clipboard.writeText(hex);
+      var m = sw.querySelector('.nm'); var t = m.textContent;
+      m.textContent = 'Copied ' + hex;
+      setTimeout(function(){ m.textContent = t; }, 1100);
+    });
+  });
+</script>
+</body>
+</html>
